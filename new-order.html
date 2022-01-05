@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="wrapper d-flex">
+        <aside class="aside">
+            <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
+                <a href="#" class="aside__logo mb-lg-5 pt-2 pb-2">
+                    <img src="img/logo.png" width="200" height="40" alt="" class="aside__logo--img">
+                </a>
+                <button class="aside__logo--burder _burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="aside__nav pb-lg-0 pb-3">
+                    <ul class="aside__nav--list">
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link _active">
+                                <span class="aside__link--icon _icon-statistics"></span>
+                                Statistics
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-new-order"></span>
+                                New order
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-orders"></span>
+                                Order
+                            </a>
+                            <ul class="aside__nav--sub-list">
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Order logs
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Drip-feed
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Subscriptions
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-services"></span>
+                                Services
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-share"></span>
+                                API
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-message"></span>
+                                Support
+                                <span class="aside__link--count">13513</span>
+                            </a>
+                            <ul class="aside__nav--sub-list">
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Tickets
+                                        <span class="aside__link--count">13513</span>
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        FAQs
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-add-funds"></span>
+                                Add funds
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link">
+                                <span class="aside__link--icon _icon-transaction"></span>
+                                Transaction log
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5">
+                        <div class="aside__user--body row">
+                            <div class="aside__user--avatar col-3">
+                                <img src="img/user/avatar.png" alt="" class="aside__user--img">
+                            </div>
+                            <div class="aside__user--info col-9 d-flex flex-column">
+                                <span class="aside__user--name">
+                                    Hi, Mark
+                                </span>
+                                <span class="aside__user--balance">
+                                    Balance: $1000
+                                </span>
+                                <a href="#" class="aside__user--log-out _link mt-2">
+                                    Log out
+                                </a>
+                            </div>    
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <section class="new-order section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5">
+            <div class="new-order__header section-header _section-elem">
+                <ul class="section-header__list pb-lg-0 pb-3">
+                    <li class="section-header__list--item">
+                        <a href="#" class="section-header__list--link _accent">
+                            <span class="section-header__list--icon _icon-section-new-order"></span>
+                            New order
+                        </a>
+                    </li>
+                    <li class="section-header__list--item">
+                        <a href="#" class="section-header__list--link">
+                            <span class="section-header__list--icon _icon-orders"></span>
+                            All orders
+                        </a>
+                    </li>
+                </ul>
+                <div class="section-header__settings">
+                    <div class="section-header__lang _drop-down">
+                        <div class="section-header__lang--current section-header__lang--item">
+                            <button class="section-header__lang--link _drop-down-current">
+                                <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                English
+                            </button>
+                        </div>
+                        <ul class="section-header__lang--list _drop-down-list">
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                      </div>
+                    <div class="section-header__lang">
+                        
+                    </div>
+                    <div class="section-header__theme">
+                        <a href="#" class="section-header__theme--link section-header__min-link" title="Change theme">
+                            <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                        </a>
+                    </div>
+                    <div class="section-header__message">
+                        <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                            <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                        </a>
+                    </div>
+                    <div class="section-header__user ms-4">
+                        <div class="section-header__user--info">
+                            <a href="#" class="section-header__user--name _link">
+                                Hi, Mark
+                            </a>
+                            <span class="section-header__user--balance">
+                                Balance: $1000
+                            </span>
+                        </div>
+                        <a href="#" class="section-header__user--avatar ms-4">
+                            <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+<div class="new-order__block _section-block mt-4 _tab-section">
+    <div class="new-order__block--header _section-block-header p-4 pt-2 pb-2">
+        <div class="new-order__block--header-body d-flex justify-content-between align-items-center">
+            <h2 class="new-order__title _title ps-4">
+                New order
+            </h2>
+            <div class="new-order__tab-nav">
+                <ul class="new-order__tab-nav--list _tab-list row justify-content-end">
+                    <li class="new-order__tab-nav--item col-auto">
+                        <a href="#single-order" class="new-order__tab-nav--link _tab-link _link">
+                            Single order
+                        </a>
+                    </li>
+                    <li class="new-order__tab-nav--item col-auto">
+                        <a href="#mass-order" class="new-order__tab-nav--link _tab-link _link _active">
+                            Mass order
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="new-order__tab-list ps-0 _tab-wrapper">
+        <li class="new-order__tab-item _tab-block" id="single-order">
+            <form action="#" class="new-order__form pt-4 p-4">
+                <div class="new-order__form--body row justify-content-between">
+                    <div class="new-order__form--block ps-3 pe-3 col-12 col-md-6">
+                        <h3 class="new-order__form--min-title _title _min">
+                            Add new
+                        </h3>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Category
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-arrow"></span>
+                                <select name="category" class="new-order__form--select _form-select">
+                                    <option value="none" selected disabled>Choose category</option>
+                                    <option value="category-1" >Category-1</option>
+                                    <option value="category-2" >Category-2</option>
+                                    <option value="category-3" >Category-3</option>
+                                </select>
+                            </span>
+                        </label>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Order service
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-arrow"></span>
+                                <select name="service" class="new-order__form--select _form-select">
+                                    <option value="none" selected disabled>Choose a service</option>
+                                    <option value="service-1" >Service-1</option>
+                                    <option value="service-2" >Service-2</option>
+                                    <option value="service-3" >Service-3</option>
+                                </select>
+                            </span>
+                        </label>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Link
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="link" value="https://" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Quantity
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="tel" name="quantity" placeholder="Phone Number" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                    </div>
+                    <div class="new-order__form--block ps-3 pe-3 col-12 col-md-6">
+                        <h3 class="new-order__form--min-title _title _min">
+                            Order resume
+                        </h3>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Quantity
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="tel" name="quantity" placeholder="Phone Number" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                        <div class="new-order__form--row pt-3 row">
+                            <label class="new-order__form--label _form-min-label col-12 mb-3 col-sm-6 col-xl-4">
+                                <span class="new-order__form--placeholder _form-placeholder">
+                                    Minimum Amount
+                                </span>
+                                <span class="new-order__form--label-body _form-elem-wrapper">
+                                    <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                    <input type="number" name="min-amount" class="new-order__form--input _form-input">
+                                </span>
+                            </label>
+                            <label class="new-order__form--label _form-min-label col-12 mb-3 col-sm-6 col-xl-4">
+                                <span class="new-order__form--placeholder _form-placeholder">
+                                    Maximum Amount
+                                </span>
+                                <span class="new-order__form--label-body _form-elem-wrapper">
+                                    <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                    <input type="number" name="max-amount" class="new-order__form--input _form-input">
+                                </span>
+                            </label>
+                            <label class="new-order__form--label _form-min-label col-12 mb-3 col-sm-6 col-xl-4">
+                                <span class="new-order__form--placeholder _form-placeholder">
+                                    Price per 1000
+                                </span>
+                                <span class="new-order__form--label-body _form-elem-wrapper">
+                                    <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                    <input type="number" name="min-amount" class="new-order__form--input _form-input">
+                                </span>
+                            </label>
+                        </div>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Description
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <textarea name="description" rows="5" placeholder="Share a reply" class="new-order__form--textarea _form-textarea"></textarea>
+                                <!-- <input type="tel" name="quantity" placeholder="Phone Number" class="new-order__form--input _form-input"> -->
+                            </span>
+                        </label>
+                    </div>
+                    <div class="new-order__form--footer new-order__footer pt-5 mt-5 col-12 _section-block-footer">
+                        <div class="new-order__footer--body row justify-content-between align-items-center">
+                            <div class="new-order__footer--block d-flex col-12 col-lg-8 align-items-center ps-3">
+                                <div class="new-order__footer--total-charge me-4">
+                                    Total charge: 
+                                    <span class="new-order__footer--total-charge-value">$50</span>
+                                </div>
+                                <div class="new-order__footer--radio pt-lg-0 pt-4">
+                                    <input type="checkbox" name="confirmed-check" id="single-order-confirmed" class="new-order__footer--radio-input _hidden-radio _form-checkbox">
+                                    <label for="single-order-confirmed" class="new-order__footer--label _form-label-checkbox">
+                                        Yes, I have confirmed the order!
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="new-order__footer--block d-flex col-12 col-lg-4 pt-lg-0 pt-4 justify-content-end pe-3">
+                                <button class="order__footer--submit _btn _large-btn" type="submit">
+                                    Place order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="new-order__tab-item _tab-block _active _fade-in" id="mass-order">
+            <form action="#" class="new-order__form p-3">
+                <div class="new-order__form--body row justify-content-between">
+                    <div class="new-order__form--block ps-4 pe-4 col-12 col-md-6">
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Link
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="link" placeholder="Placeholder" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Service
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="service" placeholder="Placeholder" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                Count
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="count" placeholder="Placeholder" class="new-order__form--input _form-input">
+                            </span>
+                        </label>
+                    </div>
+                    <div class="new-order__form--block ps-4 pe-4 col-12 col-md-6">
+                        <label class="new-order__form--label pt-3 _form-label">
+                            <span class="new-order__form--placeholder _form-placeholder">
+                                One order per line in format
+                            </span>
+                            <span class="new-order__form--label-body _form-elem-wrapper">
+                                <span class="new-order__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <textarea name="description" rows="5" placeholder="Share a reply" class="new-order__form--textarea _form-textarea"></textarea>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="new-order__form--note ps-4 pe-4 pt-2 pb-2 col-12">
+                        <span class="new-order__form--note-title">
+                            Note:
+                        </span>
+                        <div class="new-order__form--note-message">
+                            <p>
+                                Here you can place your orders easy! Please make sure you check all the prices and delivery times before you place a order!
+                                <span class="new-order__form--note-accent">
+                                    After a order submited it cannot be canceled.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="new-order__form--footer new-order__footer pt-4 col-12 _section-block-footer">
+                        <div class="new-order__footer--body row align-items-center">
+                            <div class="new-order__footer--block d-flex align-items-center pb-3 pb-lg-0 ps-4 col-12 col-lg-6">
+                                <div class="new-order__footer--radio">
+                                    <input type="checkbox" name="confirmed-check" id="mass-order-confirmed" class="new-order__footer--radio-input _hidden-radio _form-checkbox">
+                                    <label for="mass-order-confirmed" class="new-order__footer--label _form-label-checkbox">
+                                        Yes, I have confirmed the order!
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="new-order__footer--block col-12 col-lg-6 pe-4 d-flex justify-content-end">
+                                <button class="order__footer--submit _btn _large-btn" type="submit">
+                                    Place order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+    </ul>
+</div>
+
+</section>
+</div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
