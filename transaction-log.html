@@ -23,19 +23,19 @@
                 <nav class="aside__nav pb-lg-0 pb-3">
                     <ul class="aside__nav--list">
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="statistics.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-statistics"></span>
                                 Statistics
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="new-order.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-new-order"></span>
                                 New order
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="order.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-orders"></span>
                                 Order
                             </a>
@@ -58,19 +58,19 @@
                             </ul>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="services.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-services"></span>
                                 Services
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="api.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-share"></span>
                                 API
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="support.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-message"></span>
                                 Support
                                 <span class="aside__link--count">13513</span>
@@ -83,20 +83,20 @@
                                     </a>
                                 </li>
                                 <li class="aside__nav--sub-item">
-                                    <a href="#" class="aside__nav--sub-link">
+                                    <a href="faq.html" class="aside__nav--sub-link">
                                         FAQs
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="add-funds.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-add-funds"></span>
                                 Add funds
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link _active">
+                            <a href="transaction-log.html" class="aside__nav--link aside__link _active">
                                 <span class="aside__link--icon _icon-transaction"></span>
                                 Transaction log
                             </a>
@@ -105,7 +105,7 @@
                     <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5">
                         <div class="aside__user--body row">
                             <div class="aside__user--avatar col-3">
-                                <img src="img/user/avatar.png" alt="" class="aside__user--img">
+                                <img src="img/user/avatar.png" width="32" height="32" alt="" class="aside__user--img">
                             </div>
                             <div class="aside__user--info col-9 d-flex flex-column">
                                 <span class="aside__user--name">
@@ -123,11 +123,11 @@
                 </nav>
             </div>
         </aside>
-        <section class="transaction-log section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5">
+        <section class="transaction-log section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
             <div class="transaction-log__header section-header _section-elem">
                 <ul class="section-header__list pb-lg-0 pb-3">
                     <li class="section-header__list--item">
-                        <a href="#" class="section-header__list--link _accent">
+                        <a href="new-order.html" class="section-header__list--link _accent">
                             <span class="section-header__list--icon _icon-section-new-order"></span>
                             New order
                         </a>
@@ -162,9 +162,6 @@
                             </li>
                         </ul>
                       </div>
-                    <div class="section-header__lang">
-                        
-                    </div>
                     <div class="section-header__theme">
                         <a href="#" class="section-header__theme--link section-header__min-link" title="Change theme">
                             <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
@@ -194,7 +191,119 @@
 
 
 
-
+<div class="transaction-log__block mt-3">
+    <div class="transaction-log__block--body _section-block">
+        <div class="transaction-log__block--header _section-block-header ps-4 pb-1 pt-1">
+            <h2 class="transaction-log__block--title _title">
+                Transaction log
+            </h2>
+        </div>
+        <div class="transaction-log__block--table transaction-log__table">
+            <form action="#" class="transaction-log__head-table--filter transaction-log__filter">
+                <div class="transaction-log__filter--body ps-2 pe-2">
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="№" placeholder="№" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="user" placeholder="User" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="transaction-id" placeholder="Transaction ID" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="payment" placeholder="All" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="amount" placeholder="Amount" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="fee" placeholder="Fee" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="note" placeholder="Note" class="transaction-log__filter--input _form-input">
+                    </label>
+                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
+                        <input type="text" name="status" placeholder="Status" class="transaction-log__filter--input _form-input">
+                    </label>
+                </div>
+            </form>
+            <div class="transaction-log__table--head transaction-log__head-table">
+                <div class="transaction-log__head-table--row">
+                    <span class="transaction-log__head-table--param">
+                        ID
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Name
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Transaction ID
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Payment method
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Amount (includes fee)
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Transaction fee
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Note
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Created
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Status
+                    </span>
+                    <span class="transaction-log__head-table--param">
+                        Action
+                    </span>
+                </div>
+            </div>
+            <div class="transaction-log__table--body transaction-log__body-table">
+                <div class="transaction-log__body-table--wrapper">
+                    <div class="transaction-log__item pt-3 pb-3 ps-4">
+                        <span class="transaction-log__item--cell">
+                            @@id
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            Name
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            $14,000
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            $14,000
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            $14,000
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            $14,000
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            $14,000
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            <div class="transaction-log__item--status _status-1">
+                                Status
+                            </div>
+                        </span>
+                        <span class="transaction-log__item--cell">
+                            <a href="#" class="transaction-log__item--action _link">
+                                <span class="transaction-log__item--icon _icon-edit"></span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </section>
 </div>
