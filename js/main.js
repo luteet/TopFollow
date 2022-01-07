@@ -153,15 +153,23 @@ let thisTarget, checkTabActive = false;
 let checkSlideItem = false;
 body.addEventListener('click', function (e) {
 
+
+  
     thisTarget = e.target;
 
-    // Меню в шапке
+    // =-=-=-=-=-=-=-=-=-=-=-=- <aside menu> -=-=-=-=-=-=-=-=-=-=-=-=
     if (thisTarget.closest('._burger')) {
         menu.forEach(elem => {
             elem.classList.toggle('_active')
         })
     }
+    // =-=-=-=-=-=-=-=-=-=-=-=- </aside menu> -=-=-=-=-=-=-=-=-=-=-=-=
 
+
+
+
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <language> -=-=-=-=-=-=-=-=-=-=-=-=
     let dropDownCurrent = thisTarget.closest('._drop-down-current'),
     dropDownParent = (dropDownCurrent) ? dropDownCurrent.closest('._drop-down') : false;
     if (dropDownCurrent) {
@@ -177,9 +185,13 @@ body.addEventListener('click', function (e) {
       })
 
     }
+    // =-=-=-=-=-=-=-=-=-=-=-=- </language> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
+
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <clear btn input> -=-=-=-=-=-=-=-=-=-=-=-=
     let inputClearBtn = thisTarget.closest('._clear-input-btn');
     if(inputClearBtn) {
       let input = inputClearBtn.closest('label').querySelector('input'),
@@ -196,10 +208,13 @@ body.addEventListener('click', function (e) {
       }
 
     }
+    // =-=-=-=-=-=-=-=-=-=-=-=- </clear btn input> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
 
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <New order> -=-=-=-=-=-=-=-=-=-=-=-=
     let tabLink = thisTarget.closest('._tab-link');
     if(tabLink) {
       e.preventDefault();
@@ -207,10 +222,13 @@ body.addEventListener('click', function (e) {
         tab(thisTarget);
       }
     }
+    // =-=-=-=-=-=-=-=-=-=-=-=- </New order> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
 
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <FAQs> -=-=-=-=-=-=-=-=-=-=-=-=
     let slideBtn = thisTarget.closest('._slide-btn');
     if(slideBtn && !checkSlideItem) {
       checkSlideItem = true;
@@ -232,10 +250,18 @@ body.addEventListener('click', function (e) {
       }
       
     }
+    // =-=-=-=-=-=-=-=-=-=-=-=- </FAQs> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
 
 
 })
 
+
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <Chart> -=-=-=-=-=-=-=-=-=-=-=-=
 const ctx = document.querySelector('#statistics-chart');
 
 function dataChart(arg) {
@@ -426,53 +452,4 @@ try {
 
 }
 
-
-
-
-
-
-
-// =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
-/*
-let slider = new Swiper('.__slider', {
-  
-    spaceBetween: 30,
-    slidesPerView: 1,
-    centeredSlides: false,
-
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      992: {
-        slidesPerView: 3,
-        centeredSlides: true,
-    
-      },
-      600: {
-        slidesPerView: 2,
-        centeredSlides: false,
-      },
-    }
-}); 
-*/
-// =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
-
-
-/* 
-// =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-wow = new WOW({
-mobile:       false,
-})
-wow.init();
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-*/
+// =-=-=-=-=-=-=-=-=-=-=-=- </Chart> -=-=-=-=-=-=-=-=-=-=-=-=
