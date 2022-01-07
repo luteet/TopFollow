@@ -199,105 +199,287 @@
             </h2>
         </div>
         <div class="transaction-log__block--table transaction-log__table">
-            <form action="#" class="transaction-log__head-table--filter transaction-log__filter">
-                <div class="transaction-log__filter--body ps-2 pe-2">
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="№" placeholder="№" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="user" placeholder="User" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="transaction-id" placeholder="Transaction ID" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="payment" placeholder="All" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="amount" placeholder="Amount" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="fee" placeholder="Fee" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="note" placeholder="Note" class="transaction-log__filter--input _form-input">
-                    </label>
-                    <label class="transaction-log__filter--label _form-label ps-2 pe-2">
-                        <input type="text" name="status" placeholder="Status" class="transaction-log__filter--input _form-input">
-                    </label>
-                </div>
-            </form>
-            <div class="transaction-log__table--head transaction-log__head-table">
-                <div class="transaction-log__head-table--row">
-                    <span class="transaction-log__head-table--param">
-                        ID
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Name
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Transaction ID
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Payment method
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Amount (includes fee)
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Transaction fee
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Note
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Created
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Status
-                    </span>
-                    <span class="transaction-log__head-table--param">
-                        Action
-                    </span>
-                </div>
-            </div>
-            <div class="transaction-log__table--body transaction-log__body-table">
-                <div class="transaction-log__body-table--wrapper">
-                    <div class="transaction-log__item pt-3 pb-3 ps-4">
-                        <span class="transaction-log__item--cell">
-                            @@id
+            <div class="transaction-log__table--body ps-4 pe-4 pt-4 _scrollbar-styles">
+                <form action="#" class="transaction-log__head-table--filter transaction-log__filter pb-2">
+                    <div class="transaction-log__filter--body">
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="№" placeholder="№" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label ps-xxl-2 pe-xxl-2">
+                            <input type="text" name="user" placeholder="User" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="transaction-id" placeholder="Transaction ID" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label ps-xxl-2 pe-xxl-2">
+                            <input type="text" name="payment" placeholder="All" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="amount" placeholder="Amount" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="fee" placeholder="Fee" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="note" placeholder="Note" class="transaction-log__filter--input _form-input">
+                        </label>
+                        <label class="transaction-log__filter--label _form-label">
+                            <input type="text" name="status" placeholder="Status" class="transaction-log__filter--input _form-input">
+                        </label>
+                    </div>
+                </form>
+                <div class="transaction-log__table--head transaction-log__head-table">
+                    <div class="transaction-log__head-table--row pt-2 pb-2">
+                        <span class="transaction-log__head-table--param _center">
+                            ID
                         </span>
-                        <span class="transaction-log__item--cell">
+                        <span class="transaction-log__head-table--param ps-xxl-2 pe-xxl-4">
                             Name
                         </span>
-                        <span class="transaction-log__item--cell">
-                            $14,000
+                        <span class="transaction-log__head-table--param">
+                            Transaction ID
                         </span>
-                        <span class="transaction-log__item--cell">
-                            <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+                        <span class="transaction-log__head-table--param ps-xxl-2 pe-xxl-4">
+                            Payment method
                         </span>
-                        <span class="transaction-log__item--cell">
-                            $14,000
+                        <span class="transaction-log__head-table--param">
+                            Amount (includes fee)
                         </span>
-                        <span class="transaction-log__item--cell">
-                            $14,000
+                        <span class="transaction-log__head-table--param">
+                            Transaction fee
                         </span>
-                        <span class="transaction-log__item--cell">
-                            $14,000
+                        <span class="transaction-log__head-table--param">
+                            Note
                         </span>
-                        <span class="transaction-log__item--cell">
-                            $14,000
+                        <span class="transaction-log__head-table--param">
+                            Created
                         </span>
-                        <span class="transaction-log__item--cell">
-                            <div class="transaction-log__item--status _status-1">
-                                Status
-                            </div>
+                        <span class="transaction-log__head-table--param">
+                            Status
                         </span>
-                        <span class="transaction-log__item--cell">
-                            <a href="#" class="transaction-log__item--action _link">
-                                <span class="transaction-log__item--icon _icon-edit"></span>
-                            </a>
+                        <span class="transaction-log__head-table--param _center">
+                            Action
                         </span>
+                    </div>
+                </div>
+                <div class="transaction-log__body-table">
+                    <div class="transaction-log__body-table--wrapper">
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        1
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Soft UI Shopify Version
+    </span>
+    <span class="transaction-log__item--cell">
+        $14,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        $14,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $14,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $14,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $14,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-1">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        2
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Progress Track
+    </span>
+    <span class="transaction-log__item--cell">
+        $3,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        $3,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $3,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $3,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $3,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-2">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        3
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Fix Platform Errors
+    </span>
+    <span class="transaction-log__item--cell">
+        Not Set
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        Not Set
+    </span>
+    <span class="transaction-log__item--cell">
+        Not Set
+    </span>
+    <span class="transaction-log__item--cell">
+        Not Set
+    </span>
+    <span class="transaction-log__item--cell">
+        Not Set
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-3">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        4
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Launch new Mobile App
+    </span>
+    <span class="transaction-log__item--cell">
+        $20,600
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        $20,600
+    </span>
+    <span class="transaction-log__item--cell">
+        $20,600
+    </span>
+    <span class="transaction-log__item--cell">
+        $20,600
+    </span>
+    <span class="transaction-log__item--cell">
+        $20,600
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-2">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        5
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Launch new Mobile App
+    </span>
+    <span class="transaction-log__item--cell">
+        $4,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        $4,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $4,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $4,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $4,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-2">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
+                        <div class="transaction-log__item pt-3 pb-3">
+    <span class="transaction-log__item--cell _bold _center">
+        6
+    </span>
+    <span class="transaction-log__item--cell _bold ps-xxl-2">
+        Redesign Online Store
+    </span>
+    <span class="transaction-log__item--cell">
+        $2,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <img src="img/payment/logo.png" width="65" alt="" class="transaction-log__item--payment-logo">
+    </span>
+    <span class="transaction-log__item--cell">
+        $2,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $2,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $2,000
+    </span>
+    <span class="transaction-log__item--cell">
+        $2,000
+    </span>
+    <span class="transaction-log__item--cell">
+        <div class="transaction-log__item--status _status-3">
+            Processing
+        </div>
+    </span>
+    <span class="transaction-log__item--cell _center">
+        <a href="#" class="transaction-log__item--action _link">
+            <span class="transaction-log__item--icon _icon-edit"></span>
+        </a>
+    </span>
+</div>
                     </div>
                 </div>
             </div>
