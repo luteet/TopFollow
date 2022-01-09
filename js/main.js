@@ -9,9 +9,10 @@ const body = document.querySelector('body'),
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <tab> -=-=-=-=-=-=-=-=-=-=-=-=
 
-function tab(elem) {
+function tab(elem, duration) {
 
       checkTabActive = true;
+      
   
       if(elem.tagName != 'SELECT') {
         elem.closest('._tab-list').querySelectorAll('._tab-link').forEach(element => {
@@ -37,6 +38,9 @@ function tab(elem) {
           tabBlockParent = tabBlock.closest('._tab-wrapper');
   
           if(tabBlock.classList.contains('_active')) {
+            if(!tabBlock.classList.contains('_fade-in')) {
+              tabBlock.classList.add('_fade-in');
+            }
               checkTabActive = false;
               return false;
           }
@@ -46,12 +50,12 @@ function tab(elem) {
           checkTabActive = false;
           return false;
       }
+
+      const tabBlockList = tabBlockParent.querySelectorAll('._tab-block');
   
-      const tabBlockList      = tabBlockParent.querySelectorAll('._tab-block');
-  
-      tabBlockParent.style.minHeight = tabBlockActive.offsetHeight + 'px';
+      tabBlockParent.style.minHeight = (tabBlockActive) ? tabBlockActive.offsetHeight + 'px' : '0px';
       
-      tabBlockActive.classList.add('_fade-out');
+      if(tabBlockActive) tabBlockActive.classList.add('_fade-out');
   
       setTimeout(function() {
   
@@ -63,11 +67,10 @@ function tab(elem) {
   
           tabBlock.classList.add('_active');
   
-      },300);
+      },(duration) ? duration : 300);
   
       setTimeout(function() {
           tabBlock.classList.add('_fade-in');
-          
           
           tabBlockParent.style.minHeight = '0px';
   
@@ -374,6 +377,14 @@ document.querySelectorAll('.aside__nav--sub-list').forEach(element => {
   }
   
 })
+
+
+let checkTabActive = false;
+document.querySelectorAll('._tab-select').forEach(element => {
+  tab(element);
+  
+})
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </init> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
@@ -381,7 +392,7 @@ document.querySelectorAll('.aside__nav--sub-list').forEach(element => {
 
 
 
-let thisTarget, checkTabActive = false;
+let thisTarget;
 let checkSlideItem = false;
 body.addEventListener('click', function (e) {
 
