@@ -369,7 +369,7 @@ document.querySelectorAll('._slide-item').forEach(element => {
 
 document.querySelectorAll('.aside__nav--sub-list').forEach(element => {
   
-  if(!element.classList.contains('_active')) {
+  if(!element.classList.contains('_active') && !element.closest('.aside__nav--item').querySelector('.aside__link._current-page')) {
     slideUp(element, 0);
   }
   
@@ -441,9 +441,14 @@ body.addEventListener('click', function (e) {
     let asideLink         = thisTarget.closest('.aside__link'),
         asideLinkParent   = (asideLink) ? asideLink.closest('.aside__nav--item') : false,
         asideItemSubList  = (asideLinkParent) ? asideLinkParent.querySelector('.aside__nav--sub-list') : false;
+    
     if(asideLinkParent && asideItemSubList) {
-      if(!asideItemSubList.classList.contains('_active')) e.preventDefault();
-      if(!checkSlideItem && !asideItemSubList.classList.contains('_active')) {
+
+
+      if(!asideItemSubList.classList.contains('_active') && !asideLink.classList.contains('_current-page')) e.preventDefault();
+
+
+      if(!checkSlideItem && !asideItemSubList.classList.contains('_active') && !asideLink.classList.contains('_current-page')) {
 
         document.querySelectorAll('.aside__nav--sub-list._active').forEach(element => {
           slideUp(element);
@@ -453,10 +458,14 @@ body.addEventListener('click', function (e) {
           element.classList.remove('_active');
         })
 
+
+
         checkSlideItem = true;
         asideLink.classList.add('_active');
         asideItemSubList.classList.add('_active');
         slideDown(asideItemSubList);
+
+
       }
     }
     // =-=-=-=-=-=-=-=-=-=-=-=- </aside drop list> -=-=-=-=-=-=-=-=-=-=-=-=
