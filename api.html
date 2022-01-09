@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
+<script>
+    if(localStorage.getItem('theme') == 'dark') {
+        document.querySelector('body').classList.add('_dark-theme');
+    }
+</script>
     <div class="wrapper d-flex">
         <aside class="aside">
             <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
@@ -101,6 +105,7 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="aside__nav--settings aside__settings"></div>
                     <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5 pb-5">
                         <div class="aside__user--body row">
                             <div class="aside__user--avatar col-3">
@@ -124,7 +129,7 @@
         </aside>
         <section class="api section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
             <div class="api__header section-header _section-elem">
-                <ul class="section-header__list pb-lg-0 pb-3">
+                <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
                     <li class="section-header__list--item">
                         <a href="new-order.html" class="section-header__list--link _accent">
                             <span class="section-header__list--icon _icon-section-new-order"></span>
@@ -161,17 +166,30 @@
                             </li>
                         </ul>
                       </div>
-                    <div class="section-header__theme">
-                        <a href="#" class="section-header__theme--link section-header__min-link" title="Change theme">
-                            <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__message">
-                        <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
-                            <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__user ms-4">
+                      <div class="section-header__settings--block d-flex">
+                        <div class="section-header__theme ps-3 pe-3 ps-md-1 pe-md-1 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__theme--link _theme-link _light-theme section-header__min-link" title="Change theme">
+                                <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                                <script>
+                                    if(localStorage.getItem('theme') == 'dark') {
+                                        let themeLink = document.querySelector('._theme-link');
+                                        themeLink.classList.remove('_light-theme');
+                                        themeLink.classList.add('_dark-theme');
+    
+                                        let themeIcon = themeLink.querySelector('._icon-theme-to-dark');
+                                        themeIcon.classList.remove('_icon-theme-to-dark');
+                                        themeIcon.classList.add('_icon-theme-to-light');
+                                    }
+                                </script>
+                            </a>
+                        </div>
+                        <div class="section-header__message ps-3 pe-3 ps-md-2 pe-md-2 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                                <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="section-header__user ms-1 ms-md-4">
                         <div class="section-header__user--info">
                             <a href="profile.html" class="section-header__user--name _link">
                                 Hi, Mark
@@ -180,7 +198,7 @@
                                 Balance: $1000
                             </span>
                         </div>
-                        <a href="#" class="section-header__user--avatar ms-4">
+                        <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
                             <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
                         </a>
                     </div>
@@ -273,7 +291,7 @@
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
             <form action="#" class="api-block__form pb-2">
-                <label class="api-block__label">
+                <label class="api-block__label _form-label">
                     <span class="api-block__label--body _form-elem-wrapper">
                         <span class="api-block__label--icon _form-icon _icon-arrow"></span>
                         <select name="api-select" class="api-block__select _form-select">

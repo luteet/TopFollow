@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
+<script>
+    if(localStorage.getItem('theme') == 'dark') {
+        document.querySelector('body').classList.add('_dark-theme');
+    }
+</script>
     <div class="wrapper d-flex">
         <aside class="aside">
             <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
@@ -89,7 +93,7 @@
                             </ul>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="add-funds.html" class="aside__nav--link aside__link _active">
+                            <a href="add-funds.html" class="aside__nav--link aside__link _current-page">
                                 <span class="aside__link--icon _icon-add-funds"></span>
                                 Add funds
                             </a>
@@ -101,6 +105,7 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="aside__nav--settings aside__settings"></div>
                     <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5 pb-5">
                         <div class="aside__user--body row">
                             <div class="aside__user--avatar col-3">
@@ -124,7 +129,7 @@
         </aside>
         <section class="add-funds section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
             <div class="add-funds__header section-header _section-elem">
-                <ul class="section-header__list pb-lg-0 pb-3">
+                <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
                     <li class="section-header__list--item">
                         <a href="new-order.html" class="section-header__list--link _accent">
                             <span class="section-header__list--icon _icon-section-new-order"></span>
@@ -161,17 +166,30 @@
                             </li>
                         </ul>
                       </div>
-                    <div class="section-header__theme">
-                        <a href="#" class="section-header__theme--link section-header__min-link" title="Change theme">
-                            <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__message">
-                        <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
-                            <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__user ms-4">
+                      <div class="section-header__settings--block d-flex">
+                        <div class="section-header__theme ps-3 pe-3 ps-md-1 pe-md-1 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__theme--link _theme-link _light-theme section-header__min-link" title="Change theme">
+                                <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                                <script>
+                                    if(localStorage.getItem('theme') == 'dark') {
+                                        let themeLink = document.querySelector('._theme-link');
+                                        themeLink.classList.remove('_light-theme');
+                                        themeLink.classList.add('_dark-theme');
+    
+                                        let themeIcon = themeLink.querySelector('._icon-theme-to-dark');
+                                        themeIcon.classList.remove('_icon-theme-to-dark');
+                                        themeIcon.classList.add('_icon-theme-to-light');
+                                    }
+                                </script>
+                            </a>
+                        </div>
+                        <div class="section-header__message ps-3 pe-3 ps-md-2 pe-md-2 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                                <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="section-header__user ms-1 ms-md-4">
                         <div class="section-header__user--info">
                             <a href="profile.html" class="section-header__user--name _link">
                                 Hi, Mark
@@ -180,7 +198,7 @@
                                 Balance: $1000
                             </span>
                         </div>
-                        <a href="#" class="section-header__user--avatar ms-4">
+                        <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
                             <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
                         </a>
                     </div>
@@ -197,7 +215,7 @@
                 Add Funds
             </h2>
         </div>
-        <form action="#" class="add-funds__block--form add-funds__form">
+        <form action="#" class="add-funds__block--form add-funds__form _tab-section">
             <div class="add-funds__form--body ps-2 pe-2 ps-sm-4 pe-sm-4 pb-4">
                 <label class="add-funds__form--label pt-3 _form-label">
                     <span class="add-funds__form--placeholder _form-placeholder">
@@ -205,20 +223,46 @@
                     </span>
                     <span class="add-funds__form--label-body _form-elem-wrapper">
                         <span class="add-funds__form--icon _form-icon _icon-arrow"></span>
-                        <select name="payment" class="add-funds__form--select _form-select">
-                            <option value="Visa/MasterCard" selected>Visa/MasterCard</option>
-                            <option value="Visa/MasterCard-1" >Visa/MasterCard-1</option>
-                            <option value="Visa/MasterCard-2" >Visa/MasterCard-2</option>
-                            <option value="Visa/MasterCard-3" >Visa/MasterCard-3</option>
+                        <select name="payment" class="add-funds__form--select _form-select _tab-select">
+                            <option value="Visa-MasterCard" selected>Visa/MasterCard</option>
+                            <option value="Visa-MasterCard-1">Visa/MasterCard-1</option>
+                            <option value="Visa-MasterCard-2">Visa/MasterCard-2</option>
+                            <option value="Visa-MasterCard-3">Visa/MasterCard-3</option>
                         </select>
                     </span>
                 </label>
-                <div class="add-funds__form--add text-center pt-4 mt-3 pb-1">
-                    <img src="img/payment/logo.png" loading="lazy" width="125" height="26" alt="" class="add-funds__form--logo">
-                    <div class="add-funds__form--text pt-2">
-                        <p>
-                            You can deposit funds with CoinApp® they will be automaticly added into your account!
-                        </p>
+                <div class="add-funds__form--add text-center _tab-wrapper pt-4 mt-3 pb-1">
+                    <div class="add-funds__form--tab _tab-block _active _fade-in" id="Visa-MasterCard">
+                        <img src="img/payment/logo.png" loading="lazy" width="125" height="26" alt="" class="add-funds__form--logo">
+                        <div class="add-funds__form--text pt-2">
+                            <p>
+                                You can deposit funds with CoinApp® they will be automaticly added into your account!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="add-funds__form--tab _tab-block" id="Visa-MasterCard-1">
+                        <img src="img/payment/logo.png" loading="lazy" width="125" height="26" alt="" class="add-funds__form--logo">
+                        <div class="add-funds__form--text pt-2">
+                            <p>
+                                1
+                            </p>
+                        </div>
+                    </div>
+                    <div class="add-funds__form--tab _tab-block" id="Visa-MasterCard-2">
+                        <img src="img/payment/logo.png" loading="lazy" width="125" height="26" alt="" class="add-funds__form--logo">
+                        <div class="add-funds__form--text pt-2">
+                            <p>
+                                2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="add-funds__form--tab _tab-block" id="Visa-MasterCard-3">
+                        <img src="img/payment/logo.png" loading="lazy" width="125" height="26" alt="" class="add-funds__form--logo">
+                        <div class="add-funds__form--text pt-2">
+                            <p>
+                                3
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <label class="add-funds__form--label pt-3 _form-label">

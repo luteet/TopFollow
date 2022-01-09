@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
+<script>
+    if(localStorage.getItem('theme') == 'dark') {
+        document.querySelector('body').classList.add('_dark-theme');
+    }
+</script>
     <div class="wrapper d-flex">
         <aside class="aside">
             <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
@@ -22,7 +26,7 @@
                 <nav class="aside__nav pb-lg-0 pb-5">
                     <ul class="aside__nav--list">
                         <li class="aside__nav--item">
-                            <a href="index.html" class="aside__nav--link aside__link _active">
+                            <a href="index.html" class="aside__nav--link aside__link _current-page">
                                 <span class="aside__link--icon _icon-statistics"></span>
                                 Statistics
                             </a>
@@ -101,6 +105,7 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="aside__nav--settings aside__settings"></div>
                     <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5 pb-5">
                         <div class="aside__user--body row">
                             <div class="aside__user--avatar col-3">
@@ -124,7 +129,7 @@
         </aside>
         <section class="statistics section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
             <div class="statistics__header section-header _section-elem">
-                <ul class="section-header__list pb-lg-0 pb-3">
+                <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
                     <li class="section-header__list--item">
                         <a href="new-order.html" class="section-header__list--link _accent">
                             <span class="section-header__list--icon _icon-section-new-order"></span>
@@ -161,17 +166,30 @@
                             </li>
                         </ul>
                       </div>
-                    <div class="section-header__theme">
-                        <a href="#" class="section-header__theme--link section-header__min-link" title="Change theme">
-                            <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__message">
-                        <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
-                            <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
-                        </a>
-                    </div>
-                    <div class="section-header__user ms-4">
+                      <div class="section-header__settings--block d-flex">
+                        <div class="section-header__theme ps-3 pe-3 ps-md-1 pe-md-1 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__theme--link _theme-link _light-theme section-header__min-link" title="Change theme">
+                                <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                                <script>
+                                    if(localStorage.getItem('theme') == 'dark') {
+                                        let themeLink = document.querySelector('._theme-link');
+                                        themeLink.classList.remove('_light-theme');
+                                        themeLink.classList.add('_dark-theme');
+    
+                                        let themeIcon = themeLink.querySelector('._icon-theme-to-dark');
+                                        themeIcon.classList.remove('_icon-theme-to-dark');
+                                        themeIcon.classList.add('_icon-theme-to-light');
+                                    }
+                                </script>
+                            </a>
+                        </div>
+                        <div class="section-header__message ps-3 pe-3 ps-md-2 pe-md-2 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                                <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="section-header__user ms-1 ms-md-4">
                         <div class="section-header__user--info">
                             <a href="profile.html" class="section-header__user--name _link">
                                 Hi, Mark
@@ -180,7 +198,7 @@
                                 Balance: $1000
                             </span>
                         </div>
-                        <a href="#" class="section-header__user--avatar ms-4">
+                        <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
                             <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
                         </a>
                     </div>
@@ -300,7 +318,7 @@
             $14,000
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
@@ -321,7 +339,7 @@
             $3,000
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
@@ -342,7 +360,7 @@
             Not Set
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
@@ -363,7 +381,7 @@
             $20,600
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
@@ -384,7 +402,7 @@
             $4,000
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
@@ -405,20 +423,49 @@
             $2,000
         </div>
         <div class="project-block__item--detail ms-4 me-4 col-2">
-            <a href="#" class="project-block__item--btn _btn">
+            <a href="#project-popup" class="project-block__item--btn _btn _btn-popup">
                 Details
             </a>
         </div>
     </div>
 </li>
                     </ul>
+                    <div class="project-block__popup _popup" id="project-popup">
+                        <div class="_popup-wrapper">
+                            <div class="project-block__popup--bg _popup-bg"></div>
+                            <div class="project-block__popup--body _popup-body">
+                                <button type="button" class="project-block__popup--close-btn _popup-close-btn">
+                                    ✕
+                                </button>
+                                <h2 class="project-block__popup--title _title text-center _popup-title">
+                                    TITLE
+                                </h2>
+                                <div class="project-block__popup--content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores non repellendus neque nostrum delectus error tempora nam! Vel ea autem tempora optio ullam, blanditiis excepturi maiores distinctio mollitia cumque!
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus similique esse dolores commodi quo, reprehenderit repudiandae laboriosam nemo dignissimos molestiae, eius totam error blanditiis placeat debitis! Doloremque pariatur nulla quia?
+                                    </p>
+                                    <ul>
+                                        <li>• Lorem ipsum dolor sit amet.</li>
+                                        <li>• Lorem ipsum dolor sit amet.</li>
+                                        <li>• Lorem ipsum dolor sit amet.</li>
+                                    </ul>
+                                    <a href="#" class="project-block__popup--btn _btn _large-btn">
+                                        Button
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="statistics__chart mt-4">
         <div class="statistics__chart--body _section-elem">
-            <h2 class="statistics__chart--title _title mb-4 pb-2">
+            <h2 class="statistics__chart--title _title mb-4 pb-2 ps-sm-4 pb-sm-4 ps-4 pb-4">
                 Recent orders
             </h2>
             <div class="statistics__chart--block">
