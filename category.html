@@ -38,13 +38,13 @@
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <button class="aside__nav--link aside__link _current-page">
+                            <button class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-orders"></span>
                                 Order
                             </button>
                             <ul class="aside__nav--sub-list">
                                 <li class="aside__nav--sub-item">
-                                    <a href="order.html" class="aside__nav--sub-link _current-page">
+                                    <a href="order.html" class="aside__nav--sub-link ">
                                         Order logs
                                     </a>
                                 </li>
@@ -61,7 +61,7 @@
                             </ul>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="services.html" class="aside__nav--link aside__link ">
+                            <a href="services.html" class="aside__nav--link aside__link _current-page">
                                 <span class="aside__link--icon _icon-category"></span>
                                 Category
                             </a>
@@ -145,8 +145,8 @@
                 </nav>
             </div>
         </aside>
-        <section class="order section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
-            <div class="order__header section-header _section-elem">
+        <section class="category section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
+            <div class="category__header section-header _section-elem">
                 <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
                     <li class="section-header__list--item">
                         <a href="new-order.html" class="section-header__list--link _accent">
@@ -226,213 +226,164 @@
 
 
 
-<div class="order__block mt-3">
-    <div class="order__block--body _section-block">
-        <div class="order__block--header _section-block-header">
-            <div class="order__block--header-body d-flex flex-column">
-                <h2 class="order__block--title _title ps-md-4 pt-2 pb-4">
-                    Order logs
+<div class="category__block mt-3">
+    <div class="category__block--body _section-block">
+        <div class="category__block__header _section-block-header p-2 ps-md-4">
+            <div class="category__block__header--row row justify-content-between">
+                <h2 class="category__block--title _title col-auto ps-4">
+                    List
                 </h2>
-                <div class="order__block--nav order__nav">
-                    <form action="#" class="order__nav--search-form order__search-form ps-2 pe-2 ps-sm-4 pe-sm-4 pb-2">
-                        <label class="order__search-form--label _form-label">
-                            <span class="order__search-form--label-body _form-elem-wrapper">
-                                <span class="order__search-form--icon _form-icon _icon-close _clear-input-btn"></span>
-                                <input type="text" name="search" placeholder="Search" class="order__search-form--input _form-input _form-elem">
-                            </span>
-                        </label>
-                        <label class="order__search-form--label _form-label">
-                            <span class="order__search-form--label-body _form-elem-wrapper">
-                                <span class="order__search-form--icon _form-icon _icon-arrow"></span>
-                                <select name="category" class="order__search-form--select _form-select _form-elem">
-                                    <option value="order-id" selected>Order ID</option>
-                                    <option value="api-order-id">API Order ID</option>
-                                    <option value="order-link">Order Link</option>
-                                    <option value="user-email">User Email</option>
-                                </select>
-                            </span>
-                        </label>
-                        <label class="order__search-form--label _form-label">
-                            <button type="submit" class="order__search-form--submit _form-btn _form-elem _icon-search" title="Search"></button>
-                        </label>
-                    </form>
-                    <ul class="order__nav--list row ps-2 pe-2">
-                        <li class="order__nav--item col-3 col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                All
-                            </a>
-                        </li>
-                        <li class="order__nav--item col-3 col-md-auto">
-                            <a href="#" class="order__nav--link _link _active">
-                                Pending
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Processing
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                In progress
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Completed
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Partial
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Canceled
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Refunded
-                            </a>
-                        </li>
-                        <li class="order__nav--item col col-md-auto">
-                            <a href="#" class="order__nav--link _link">
-                                Awaiting
-                            </a>
-                        </li>
-                    </ul>
+                <div class="category__block--action action-block col-auto">
+                    <div class="action-block__body _sub-parent">
+                        <button type="button" class="action-block__btn _btn _alt _sub-open">
+                            <span class="action-block__btn--icon _icon-burger"></span>
+                            Action
+                            <span class="action-block__btn--icon _icon-arrow"></span>
+                        </button>
+                        <ul class="action-block__sub-list ps-0 pt-2 pb-2 m-0 _sub-list">
+                            <li class="action-block__sub-list--li">
+                                <button type="button" class="action-block__sub-list--btn _link">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.00176 11.9844H9.99824L10.3291 4.98438H3.6709L4.00176 11.9844Z" fill="#EB5757" fill-opacity="0.15"/>
+                                        <path d="M11.8125 4H10.0625V2.90625C10.0625 2.42363 9.67012 2.03125 9.1875 2.03125H4.8125C4.32988 2.03125 3.9375 2.42363 3.9375 2.90625V4H2.1875C1.94551 4 1.75 4.19551 1.75 4.4375V4.875C1.75 4.93516 1.79922 4.98438 1.85938 4.98438H2.68516L3.02285 12.1348C3.04473 12.601 3.43027 12.9688 3.89648 12.9688H10.1035C10.5711 12.9688 10.9553 12.6023 10.9771 12.1348L11.3148 4.98438H12.1406C12.2008 4.98438 12.25 4.93516 12.25 4.875V4.4375C12.25 4.19551 12.0545 4 11.8125 4ZM4.92188 3.01562H9.07812V4H4.92188V3.01562ZM9.99824 11.9844H4.00176L3.6709 4.98438H10.3291L9.99824 11.9844Z" fill="#EB5757"/>
+                                    </svg>
+                                    Delete
+                                </button>
+                            </li>
+                            <li class="action-block__sub-list--li">
+                                <button type="button" class="action-block__sub-list--btn _link">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.00176 11.9844H9.99824L10.3291 4.98438H3.6709L4.00176 11.9844Z" fill="#EB5757" fill-opacity="0.15"/>
+                                        <path d="M11.8125 4H10.0625V2.90625C10.0625 2.42363 9.67012 2.03125 9.1875 2.03125H4.8125C4.32988 2.03125 3.9375 2.42363 3.9375 2.90625V4H2.1875C1.94551 4 1.75 4.19551 1.75 4.4375V4.875C1.75 4.93516 1.79922 4.98438 1.85938 4.98438H2.68516L3.02285 12.1348C3.04473 12.601 3.43027 12.9688 3.89648 12.9688H10.1035C10.5711 12.9688 10.9553 12.6023 10.9771 12.1348L11.3148 4.98438H12.1406C12.2008 4.98438 12.25 4.93516 12.25 4.875V4.4375C12.25 4.19551 12.0545 4 11.8125 4ZM4.92188 3.01562H9.07812V4H4.92188V3.01562ZM9.99824 11.9844H4.00176L3.6709 4.98438H10.3291L9.99824 11.9844Z" fill="#EB5757"/>
+                                    </svg>
+                                    All deactivated categories
+                                </button>
+                            </li>
+                            <li class="action-block__sub-list--li">
+                                <button type="button" class="action-block__sub-list--btn _link">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.83995 9.67383H5.64522C5.70948 9.67383 5.771 9.64512 5.81338 9.5959L7.0001 8.18086L8.18681 9.5959C8.22782 9.64512 8.28935 9.67383 8.35497 9.67383H9.16024C9.25321 9.67383 9.30379 9.56582 9.24364 9.49473L7.57158 7.5L9.24501 5.50527C9.30516 5.43418 9.25458 5.32617 9.16161 5.32617H8.35634C8.29208 5.32617 8.23056 5.35488 8.18818 5.4041L7.0001 6.81914L5.81338 5.4041C5.77237 5.35488 5.71085 5.32617 5.64522 5.32617H4.83995C4.74698 5.32617 4.6964 5.43418 4.75655 5.50527L6.42862 7.5L4.75655 9.49473C4.74308 9.51057 4.73443 9.52995 4.73165 9.55057C4.72886 9.57118 4.73204 9.59216 4.74082 9.61102C4.7496 9.62988 4.76361 9.64582 4.78118 9.65695C4.79875 9.66809 4.81915 9.67394 4.83995 9.67383Z" fill="#EB5757"/>
+                                        <path d="M12.0312 2.03125H1.96875C1.72676 2.03125 1.53125 2.22676 1.53125 2.46875V12.5312C1.53125 12.7732 1.72676 12.9688 1.96875 12.9688H12.0312C12.2732 12.9688 12.4688 12.7732 12.4688 12.5312V2.46875C12.4688 2.22676 12.2732 2.03125 12.0312 2.03125ZM11.4844 11.9844H2.51562V3.01562H11.4844V11.9844Z" fill="#EB5757"/>
+                                    </svg>
+                                    Deatice
+                                </button>
+                            </li>
+                            <li class="action-block__sub-list--li">
+                                <button type="button" class="action-block__sub-list--btn _link">
+                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.91667 1.25H3.08333C1.79467 1.25 0.75 2.29467 0.75 3.58333V9.41667C0.75 10.7053 1.79467 11.75 3.08333 11.75H8.91667C10.2053 11.75 11.25 10.7053 11.25 9.41667V3.58333C11.25 2.29467 10.2053 1.25 8.91667 1.25Z" stroke="#219653" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.25 6.49992L5.5625 7.66659L7.75 5.33325" stroke="#219653" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Active
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="order__block--table order__table _scrollbar-styles">
-            <div class="order__table--body">
-                <div class="order__table--head order__head-table ps-4 pt-3">
-                    <div class="order__head-table--id">
-                        ID
-                    </div>
-                    <div class="order__head-table--api">
-                        API Order
-                    </div>
-                    <div class="order__head-table--user">
-                        User
-                    </div>
-                    <div class="order__head-table--details">
-                        Order basic details
-                    </div>
-                    <div class="order__head-table--created">
-                        Created
-                    </div>
-                    <div class="order__head-table--status">
-                        Status
-                    </div>
-                    <div class="order__head-table--action">
-                        Action
-                    </div>
-                </div>
-                <div class="order__table--body order__body-table">
-                    <div class="order__body-table--item pt-3 pb-3 ps-4">
-    <div class="order__body-table--id order__id">
+        <form action="#" class="category__block--wrapper _scrollbar-styles overflow-x-auto">
+            <table class="category__block--table category__table _table">
+                <colgroup>
+                    <col class="category__table--col-1">
+                    <col class="category__table--col-2">
+                    <col class="category__table--col-3">
+                    <col class="category__table--col-4">
+                    <col class="category__table--col-5">
+                    <col class="category__table--col-6">
+                    <col class="category__table--col-7">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td class="p-3 pb-1">
+                            <div class="category__table--checkbox ps-3 _table-parent-check-all-checkbox">
+                                <input type="checkbox" name="category-checkbox-all" id="category-all" class="category__table--checkbox-input _hidden-checkbox _form-checkbox">
+                                <label for="category-all" class="category__table--label _form-label-checkbox _min mt-3 mb-2 _table-check-all-checkbox"></label>
+                            </div>
+                        </td>
+                        <td class="p-3 pb-1">
+                            No.
+                        </td>
+                        <td class="p-3 pb-1">
+                            Name
+                        </td>
+                        <td class="p-3 pb-1">
+                            Description
+                        </td>
+                        <td class="p-3 pb-1">
+                            Sort
+                        </td>
+                        <td class="p-3 pb-1">
+                            Status
+                        </td>
+                        <td class="p-3 pb-1 text-center">
+                            Action
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+    <td class="p-3 pb-4 pt-4">
+        <div class="category__table--checkbox ps-3 mb-1">
+            <input type="checkbox" name="category-checkbox-1" id="category-1" class="category__table--checkbox-input _hidden-checkbox _form-checkbox">
+            <label for="category-1" class="category__table--label _form-label-checkbox _min"></label>
+        </div>
+    </td>
+    <td class="p-3 pb-4 pt-4 fw-bold">
         1
-    </div>
-    <div class="order__body-table--api order__api">
-        Soft UI Shopify Version
-    </div>
-    <div class="order__body-table--user order__user">
-        Mike
-    </div>
-    <div class="order__body-table--details order__details">
-        <span class="order__details--icon _icon-followers me-3 mt-1"></span>
-        <div class="order__details--block">
-            <span class="order__details--name">
-                Instagram followers
-            </span>
-            <ul class="order__details--list">
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="order__body-table--created order__created">
-        $14,000
-    </div>
-    <div class="order__body-table--status order__status">
-        <span class="order__status--elem _status-1">
-            Status
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        Followers
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        Best price for resellers write on tickets
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        1
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        <span class="category__table--status p-2 _status-1">
+            Active
         </span>
-    </div>
-    <div class="order__body-table--action order__action">
-        <a href="#" class="order__action--link _link">
-            <span class="order__action--icon _icon-edit"></span>
+    </td>
+    <td class="p-3 pb-4 pt-4 text-center">
+        <a href="#" class="category__table--link _link">
+            <span class="category__table--link-icon _icon-details"></span>
         </a>
-    </div>
-</div>
-                    <div class="order__body-table--item pt-3 pb-3 ps-4">
-    <div class="order__body-table--id order__id">
-        4
-    </div>
-    <div class="order__body-table--api order__api">
-        Launch new Mobile App
-    </div>
-    <div class="order__body-table--user order__user">
-        Mike
-    </div>
-    <div class="order__body-table--details order__details">
-        <span class="order__details--icon _icon-likes me-3 mt-1"></span>
-        <div class="order__details--block">
-            <span class="order__details--name">
-                Instagram Likes
-            </span>
-            <ul class="order__details--list">
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-                <li class="order__details--li">
-                    info
-                </li>
-            </ul>
+    </td>
+</tr><tr>
+    <td class="p-3 pb-4 pt-4">
+        <div class="category__table--checkbox ps-3 mb-1">
+            <input type="checkbox" name="category-checkbox-2" id="category-2" class="category__table--checkbox-input _hidden-checkbox _form-checkbox">
+            <label for="category-2" class="category__table--label _form-label-checkbox _min"></label>
         </div>
-    </div>
-    <div class="order__body-table--created order__created">
-        $20,600
-    </div>
-    <div class="order__body-table--status order__status">
-        <span class="order__status--elem _status-2">
-            Status
+    </td>
+    <td class="p-3 pb-4 pt-4 fw-bold">
+        2
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        Followers
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        Best price for resellers write on tickets
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        1
+    </td>
+    <td class="p-3 pb-4 pt-4">
+        <span class="category__table--status p-2 _status-1">
+            Active
         </span>
-    </div>
-    <div class="order__body-table--action order__action">
-        <a href="#" class="order__action--link _link">
-            <span class="order__action--icon _icon-edit"></span>
+    </td>
+    <td class="p-3 pb-4 pt-4 text-center">
+        <a href="#" class="category__table--link _link">
+            <span class="category__table--link-icon _icon-details"></span>
         </a>
-    </div>
-</div>
-                </div>
-            </div>
-        </div>
+    </td>
+</tr>
+                </tbody>
+            </table>
+        </form>
     </div>
 </div>
 

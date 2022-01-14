@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<script>
+    if(localStorage.getItem('theme') == 'dark') {
+        document.querySelector('body').classList.add('_dark-theme');
+    }
+</script>
+    <div class="wrapper d-flex">
+        <aside class="aside">
+            <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
+                <a href="index.html" class="aside__logo mb-lg-5 pt-2 pb-2">
+                    <img src="img/logo.png" width="200" height="40" alt="" class="aside__logo--img">
+                </a>
+                <button class="aside__logo--burder _burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="aside__nav pb-lg-0 pb-5">
+                    <ul class="aside__nav--list">
+                        <li class="aside__nav--item">
+                            <a href="index.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-statistics"></span>
+                                Statistics
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="new-order.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-new-order"></span>
+                                New order
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <button class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-orders"></span>
+                                Order
+                            </button>
+                            <ul class="aside__nav--sub-list">
+                                <li class="aside__nav--sub-item">
+                                    <a href="order.html" class="aside__nav--sub-link ">
+                                        Order logs
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Drip-feed
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Subscriptions
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="services.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-category"></span>
+                                Category
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="services.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-services"></span>
+                                Services
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="api.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-share"></span>
+                                API
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="support.html" class="aside__nav--link aside__link  ">
+                                <span class="aside__link--icon _icon-message"></span>
+                                    Tickets
+                                <span class="aside__link--count">13513</span>
+                            </a>
+                            <!-- <ul class="aside__nav--sub-list">
+                                <li class="aside__nav--sub-item">
+                                    <a href="support.html" class="aside__nav--sub-link ">
+                                        Tickets
+                                        <span class="aside__link--count">13513</span>
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="faq.html" class="aside__nav--sub-link ">
+                                        FAQs
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <!-- <li class="aside__nav--item">
+                            <a href="add-funds.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-add-funds"></span>
+                                Add funds
+                            </a>
+                        </li> -->
+                        <li class="aside__nav--item">
+                            <a href="transaction-log.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-transaction"></span>
+                                Transaction log
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link _current-page">
+                                <span class="aside__link--icon _icon-user"></span>
+                                User manager
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="#" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-settings"></span>
+                                System Settings
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="aside__nav--settings aside__settings"></div>
+                    <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5 pb-5">
+                        <div class="aside__user--body row">
+                            <div class="aside__user--avatar col-3">
+                                <img src="img/user/avatar.png" width="32" height="32" alt="" class="aside__user--img">
+                            </div>
+                            <div class="aside__user--info col-9 d-flex flex-column">
+                                <span class="aside__user--name">
+                                    Hi, Mark
+                                </span>
+                                <a href="#" class="aside__user--link _link">
+                                    Admin account
+                                </a>
+                                <a href="#" class="aside__user--log-out _link mt-2">
+                                    Log out
+                                </a>
+                            </div>    
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <section class="users section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
+            <div class="users__header section-header _section-elem">
+                <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
+                    <li class="section-header__list--item">
+                        <a href="new-order.html" class="section-header__list--link _accent">
+                            <span class="section-header__list--icon _icon-section-new-order"></span>
+                            New order
+                        </a>
+                    </li>
+                    <li class="section-header__list--item">
+                        <a href="#" class="section-header__list--link">
+                            <span class="section-header__list--icon _icon-orders"></span>
+                            All orders
+                        </a>
+                    </li>
+                </ul>
+                <div class="section-header__settings">
+                    <div class="section-header__lang _drop-down">
+                        <div class="section-header__lang--current section-header__lang--item">
+                            <button class="section-header__lang--link _drop-down-current">
+                                <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                English
+                            </button>
+                        </div>
+                        <ul class="section-header__lang--list _drop-down-list">
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                      </div>
+                      <div class="section-header__settings--block d-flex">
+                        <div class="section-header__theme ps-3 pe-3 ps-md-1 pe-md-1 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__theme--link _theme-link _light-theme section-header__min-link" title="Change theme">
+                                <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                                <script>
+                                    if(localStorage.getItem('theme') == 'dark') {
+                                        let themeLink = document.querySelector('._theme-link');
+                                        themeLink.classList.remove('_light-theme');
+                                        themeLink.classList.add('_dark-theme');
+    
+                                        let themeIcon = themeLink.querySelector('._icon-theme-to-dark');
+                                        themeIcon.classList.remove('_icon-theme-to-dark');
+                                        themeIcon.classList.add('_icon-theme-to-light');
+                                    }
+                                </script>
+                            </a>
+                        </div>
+                        <div class="section-header__message ps-3 pe-3 ps-md-2 pe-md-2 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                                <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="section-header__user ms-1 ms-md-4">
+                        <div class="section-header__user--info">
+                            <span class="section-header__user--name">
+                                Hi, Mark
+                            </span>
+                            <a href="profile.html" class="section-header__user--link _link">
+                                Admin account
+                            </a>
+                        </div>
+                        <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
+                            <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+<div class="users__block mt-3">
+    <div class="users__block--body _section-block">
+        <div class="users__block--header _section-block-header p-2 ps-md-4">
+            <div class="users__block--header-row row justify-content-between">
+                <h2 class="users__block--title _title col-auto ps-4">
+                    List
+                </h2>
+                <form action="#" class="users__block--form users__search d-flex col-auto">
+                    <label class="users__search--label pt-3 _form-label">
+                        <span class="users__search--label-body _form-elem-wrapper">
+                            <span class="users__search--icon _form-icon _icon-arrow"></span>
+                            <select name="Order ID" class="users__search--select _form-select">
+                                <option value="none" selected disabled>Order ID</option>
+                                <option value="order-1" >Order ID 1</option>
+                                <option value="order-2" >Order ID 2</option>
+                                <option value="order-3" >Order ID 3</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="users__search--label pt-3 _form-label">
+                        <button class="users__search--submit _btn _icon-search"></button>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <form action="#" class="users__block--wrapper _scrollbar-styles">
+            <table class="users__block--table users__table _table">
+                <colgroup>
+                    <col class="users__table--col-1">
+                    <col class="users__table--col-2">
+                    <col class="users__table--col-3">
+                    <col class="users__table--col-4">
+                    <col class="users__table--col-5">
+                    <col class="users__table--col-6">
+                    <col class="users__table--col-7">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td class="p-3 pb-1">
+                            No.
+                        </td>
+                        <td class="p-3 pb-1">
+                            User Profile
+                        </td>
+                        <td class="p-3 pb-1">
+                            Funds
+                        </td>
+                        <td class="p-3 pb-1">
+                            Custom Rate(%)
+                        </td>
+                        <td class="p-3 pb-1">
+                            Created
+                        </td>
+                        <td class="p-3 pb-1 text-center">
+                            Status
+                        </td>
+                        <td class="p-3 pb-1 text-center">
+                            Action
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+    <td class="p-3 fw-semibold">
+        1
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-1" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-1" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        2
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-2" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-2" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        3
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-3" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-3" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        4
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-4" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-4" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        5
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-5" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-5" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        6
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-6" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-6" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        7
+    </td>
+    <td class="p-3">
+        <div class="users__table--user-name fw-bold">
+            MarinaDesigner
+        </div>
+        <div class="users__table--user-info">
+            designer@designer.com<br>
+            Regular User
+        </div>
+    </td>
+    <td class="p-3">
+        $ 0.00
+    </td>
+    <td class="p-3">
+        <a href="#users-popup" class="users__table--custome-rate-link _btn-popup _btn _alt">
+            <span class="users__table--custome-rate-link-icon _icon-plus"></span>
+            Custom Rate
+        </a>
+    </td>
+    <td class="p-3">
+        2022-01-10 12:40:07
+    </td>
+    <td class="p-3">
+        <div class="users__table--switch d-flex justify-content-center">
+            <input type="checkbox" id="users-checkbox-7" class="users__table--switch-input _hidden-checkbox _form-switch-checkbox">
+            <label for="users-checkbox-7" class="users__table--label _form-label-switch-checkbox"></label>
+        </div>
+    </td>
+    <td class="p-3">
+        <div class="users__table--action users__action _sub-parent d-flex justify-content-end pe-3">
+            <a href="#" class="users__action--link _sub-open _link _icon-details"></a>
+            <ul class="users__action--sub-list _sub-list">
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-edit-alt"></span>
+                        Edit
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-eye"></span>
+                        View User
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-trash"></span>
+                        Delete
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-mail"></span>
+                        Send Mail
+                    </a>
+                </li>
+                <li class="users__action--sub-item">
+                    <a href="#" class="users__action--sub-link _link">
+                        <span class="users__action--sub-icon _icon-dollar"></span>
+                        Add funds
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="users-block__popup _popup" id="users-popup">
+            <div class="_popup-wrapper">
+                <div class="users-block__popup--bg _popup-bg"></div>
+                <form action="#" class="users-block__popup--body _popup-body p-0">
+                    <button type="button" class="users-block__popup--close-btn _popup-close-btn _close-popup">
+                        ✕
+                    </button>
+                    <div class="users-block__popup--header _section-block-header p-3 pt-4 ps-4 pe-4">
+                        <h2 class="users-block__popup--title _title ps-2 pe-2">
+                            Edit custom  rates (designer@designer.com)
+                        </h2>
+                    </div>
+                    <div class="users-block__popup--row p-4">
+                        <label class="users-block__popup--label _form-label ps-2 pe-2">
+                            <input type="text" name="search" value="11 - Drugak (0,8)" class="users-block__popup--input _form-input pt-3 pb-3">
+                        </label>
+                    </div>
+                    <div class="users-block__popup--inner _scrollbar-styles">
+                        <table class="users-block__popup--table _table">
+                            <colgroup>
+                                <col class="users-block__popup--table-col-1">
+                                <col class="users-block__popup--table-col-2">
+                                <col class="users-block__popup--table-col-3">
+                                <col class="users-block__popup--table-col-4">
+                                <col class="users-block__popup--table-col-5">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr><tr>
+    <td class="p-3 fw-semibold">
+        <span class="ps-4">
+            9
+        </span>
+    </td>
+    <td class="p-3 fw-semibold">
+        New service
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--table-value fw-bold">0.8</div>
+        <div class="users-block__popup--table-value">0.59</div>
+    </td>
+    <td class="p-3">
+        <label class="users-block__popup--label _form-label">
+            <input type="text" value="0,8" class="users-block__popup--input _form-input">
+        </label>
+    </td>
+    <td class="p-3">
+        <div class="users-block__popup--btn-body pe-4">
+            <buttom type="button" class="users-block__popup--btn-remove _icon-trash"></buttom>
+        </div>
+    </td>
+</tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="users-block__popup--row p-4 pt-0 mt-2 _section-block-footer">
+                        <div class="users-block__popup--footer mt-4 ps-2 pe-2 d-flex justify-content-between flex-wrap align-items-center flex-md-row flex-column">
+                            <div class="users-block__popup--footer-item">
+                                <button type="button" class="users-block__popup--delete-all">
+                                    Delete all
+                                </button>
+                            </div>
+                            <div class="users-block__popup--footer-item">
+                                <button type="submit" class="users-block__popup--submit _btn _large-btn">
+                                    Save
+                                </button>
+                                <button type="button" class="users-block__popup--close _close-popup _btn _large-btn _disabled">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+</div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

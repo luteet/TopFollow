@@ -186,7 +186,7 @@ function popup(arg) {
         
         popup = document.querySelector(id);
         popupBg = popup.querySelector('._popup-bg');
-        popupCloseBtn = popup.querySelector('._popup-close-btn');
+        popupCloseBtn = popup.querySelectorAll('._close-popup');
 
     } catch {
         return false;
@@ -226,8 +226,6 @@ function popup(arg) {
         body.classList.remove('_popup-active');
         html.style.setProperty('--popup-padding', window.innerWidth - body.offsetWidth + 'px');
         body.classList.add('_popup-active');
-        
-        //window.location.hash = id;
 
         popup.classList.add('_active');
         if(header) header.classList.add('_popup-active');
@@ -237,7 +235,6 @@ function popup(arg) {
           FX.fadeIn(popup, {
             duration: duration,
             complete: function () {
-              /* popup.style.display = 'none'; */
             }
           });
         },duration);
@@ -256,7 +253,8 @@ function popup(arg) {
             },duration)
         });
 
-        popupCloseBtn.addEventListener('click', function() {
+        popupCloseBtn.forEach(element => {
+          element.addEventListener('click', function() {
             if(document.querySelectorAll('._popup._active').length <= 1) {
                 removeFunc(popup, true);
             } else {
@@ -266,6 +264,9 @@ function popup(arg) {
                 return false;
             },duration)
         });
+        })
+
+        
 
         setTimeout(() => {
             popupCheck = true;
@@ -545,6 +546,85 @@ body.addEventListener('click', function (e) {
 
 
 
+    // =-=-=-=-=-=-=-=-=-=-=-=- <Action btn> -=-=-=-=-=-=-=-=-=-=-=-=
+    /* let actionBtn = thisTarget.closest('.action-block__btn');
+    if(actionBtn) {
+      let subList = actionBtn.closest('.action-block').querySelector('.action-block__sub-list');
+
+      if(!subList.classList.contains('_active')) {
+        subList.classList.add('_active');
+        actionBtn.classList.add('_active');
+      } else {
+        subList.classList.remove('_active');
+        actionBtn.classList.remove('_active');
+      }
+
+    } else {
+      let subList = document.querySelector('.action-block__sub-list._active'),
+          actionBtn = document.querySelector('.action-block__btn._active');
+      if(subList) subList.classList.remove('_active');
+      if(actionBtn) actionBtn.classList.remove('_active');
+
+    } */
+    // =-=-=-=-=-=-=-=-=-=-=-=- </Action btn> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <Sub List> -=-=-=-=-=-=-=-=-=-=-=-=
+
+    let subOpen = thisTarget.closest('._sub-open');
+    if(subOpen) {
+      e.preventDefault();
+      let subList = subOpen.closest('._sub-parent').querySelector('._sub-list');
+
+      if(!subList.classList.contains('_active')) {
+        subList.classList.add('_active');
+        subOpen.classList.add('_active');
+      } else {
+        subList.classList.remove('_active');
+        subOpen.classList.remove('_active');
+      }
+
+    } else {
+      let subList = document.querySelector('._sub-list._active'),
+          subOpen = document.querySelector('._sub-open._active');
+      if(subList) subList.classList.remove('_active');
+      if(subOpen) subOpen.classList.remove('_active');
+
+    }
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- </Sub List> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+    let checkAllLabel = thisTarget.closest('._table-check-all-checkbox');
+    if(checkAllLabel) {
+      e.preventDefault();
+
+      let input = checkAllLabel.closest('._table-parent-check-all-checkbox').querySelector('input[type="checkbox"]');
+      input.checked = !input.checked;
+      let allCheckBoxList = checkAllLabel.closest('table').querySelector('tbody').querySelectorAll('._form-checkbox');
+      
+      if(input.checked) {
+
+        allCheckBoxList.forEach(element => {
+          element.checked = true;
+        })
+
+      } else {
+
+        allCheckBoxList.forEach(element => {
+          element.checked = false;
+        })
+
+      }
+    }
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <Add funds> -=-=-=-=-=-=-=-=-=-=-=-=
     let tabSelect     = thisTarget.closest('._tab-select');
     if(tabSelect) {
@@ -637,6 +717,7 @@ body.addEventListener('click', function (e) {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <Chart> -=-=-=-=-=-=-=-=-=-=-=-=
 const ctx = document.querySelector('#statistics-chart');
+const pieCtx = document.querySelector('#statistics-pie-chart');
 
 function dataChart(arg) {
     let result = {
@@ -670,6 +751,68 @@ function dataChart(arg) {
     return result;
 }
 
+const externalTooltipHandler = (context) => {
+
+  const value = context.tooltip.dataPoints[0].formattedValue;
+  const { chart, tooltip } = context;
+  
+  const tooltipEl = document.querySelector('.chart-tooltip');
+  let tooltipBlock = document.createElement('div');
+  tooltipBlock.classList.add('chart-tooltip-block');
+  tooltipBlock.innerHTML = `${value}%`;
+  
+
+  if (tooltip.opacity === 0) {
+      tooltipEl.style.opacity = 0;
+      tooltipEl.style.visibility = 'hidden';
+      return;
+  }
+
+  if (tooltip.body) {
+      /* const titleLines = tooltip.title || [];
+      const bodyLines = tooltip.body.map(b => b.pies);
+      
+
+      const tooltipBlockHeader = document.createElement('div');
+      tooltipBlockHeader.classList.add('chart-tooltip-block__header')
+
+      titleLines.forEach(title => {
+          const text = document.createTextNode(title);
+
+          tooltipBlockHeader.appendChild(text);
+          tooltipBlock.appendChild(tooltipBlockHeader);
+      });
+
+      const tooltipBlockBody = document.createElement('div');
+      tooltipBlockBody.classList.add('chart-tooltip-block__body');
+
+      bodyLines.forEach((body, i) => {
+
+          tooltipEl.style.setProperty('--color', tooltip.dataPoints[0].dataset.backgroundColor);
+
+          const text = document.createTextNode(body);
+
+
+          tooltipBlockBody.appendChild(text);
+          tooltipBlock.appendChild(tooltipBlockBody);
+      }); */
+
+      const tableRoot = tooltipEl.querySelector('.chart-tooltip-block');
+
+      if (tableRoot) tableRoot.remove();
+
+      tooltipEl.appendChild(tooltipBlock);
+  }
+
+  const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
+
+  tooltipEl.style.opacity = 1;
+  tooltipEl.style.visibility = 'visible';
+  tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+  tooltipEl.style.top = positionY + tooltip.caretY + 'px';
+  tooltipEl.style.font = tooltip.options.bodyFont.string;
+  //tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
+};
 
 let data = dataChart({
     labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
@@ -814,6 +957,71 @@ try {
     plugins: [htmlLegendPlugin]
 
 })
+
+} catch {
+
+}
+
+try {
+  new Chart(pieCtx.getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Processing', 'Processing', 'Pending', 'In progress', 'Partial', 'Canceled', 'Refunded'],
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [10, 13, 11, 20, 8, 9, 29],
+          borderWidth: 0,
+          
+          backgroundColor: [
+            'rgba(187, 57, 188, 1)',
+            'rgba(244, 183, 64, 1)',
+            'rgba(162, 107, 0, 1)',
+            'rgba(0, 186, 136, 1)',
+            'rgba(28, 150, 238, 1)',
+            'rgba(255, 76, 156, 1)',
+            'rgba(195, 0, 82, 1)',
+          ],
+        },
+      ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+          htmlLegend: {
+              containerID: 'pie-legend-container',
+          },
+          tooltip: {
+            boxWidth: 0,
+            boxHeight: 0,
+
+            padding: 15,
+
+            backgroundColor: 'rgba(255,255,255,1)',
+            bodyColor: '#000',
+
+            bodyFont: {
+              size: 16,
+            },
+
+            position: 'average',
+            usePointStyle: true,
+            callbacks: {
+                label: function (context) {
+                    let value = context.formattedValue;
+                        return value + '%';
+                }
+            },
+          },
+          legend: {
+              display: false,
+          }
+      }
+    },
+    plugins: [htmlLegendPlugin]
+
+})
+
 } catch {
 
 }
