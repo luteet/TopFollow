@@ -9652,6 +9652,10 @@ body._dark-theme .section-header__min-link:hover {
   font-size: 0.75rem;
 }
 
+.users__table thead {
+  font-weight: 600;
+}
+
 .users__table--user-name {
   font-size: 0.75rem;
 }
