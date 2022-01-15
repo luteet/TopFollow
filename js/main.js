@@ -7,6 +7,11 @@ const body = document.querySelector('body'),
 
 
 
+
+
+
+
+    
 // =-=-=-=-=-=-=-=-=-=-=-=- <tab> -=-=-=-=-=-=-=-=-=-=-=-=
 
 function tab(elem, duration) {
@@ -81,6 +86,11 @@ function tab(elem, duration) {
 }
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </tab> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
 
 
 
@@ -163,6 +173,9 @@ function tab(elem, duration) {
   };
   window.FX = FX;
 })()
+
+
+
 
 
 
@@ -280,6 +293,11 @@ function popup(arg) {
 
 
 
+
+
+
+
+
 let slideUp = (target, duration=500) => {
   
   target.style.transitionProperty = 'height, margin, padding';
@@ -362,6 +380,7 @@ let slideToggle = (target, duration = 500) => {
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <init> -=-=-=-=-=-=-=-=-=-=-=-=
+
 document.querySelectorAll('._slide-item').forEach(element => {
 
   if(!element.classList.contains('_active')) {
@@ -371,13 +390,35 @@ document.querySelectorAll('._slide-item').forEach(element => {
 })
 
 
-document.querySelectorAll('.aside__nav--sub-list').forEach(element => {
+
+
+
+
+
+
+document.querySelectorAll('.aside__nav--sub-link._current-page').forEach(element => {
   
-  if(!element.classList.contains('_active') && !element.closest('.aside__nav--item').querySelector('.aside__link._current-page')) {
-    slideUp(element, 0);
+  let parent = element.parentElement;
+  while(parent.classList.contains('_aside-sub-parent') || parent.classList.contains('_aside-sub-list') || parent.classList.contains('aside__nav--sub-item')) {
+    
+    if(parent.classList.contains('_aside-sub-list')) {
+      slideDown(parent, 0);
+    }
+
+    if(parent.querySelector('._aside-sub-open')) {
+      parent.querySelector('._aside-sub-open').classList.add('_active');
+    }
+
+    parent = parent.parentElement;
   }
   
 })
+
+
+
+
+
+
 
 
 let checkTabActive = false;
@@ -406,6 +447,14 @@ body.addEventListener('click', function (e) {
         })
     }
     // =-=-=-=-=-=-=-=-=-=-=-=- </aside menu> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+
+
 
 
 
@@ -449,8 +498,24 @@ body.addEventListener('click', function (e) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <aside drop list> -=-=-=-=-=-=-=-=-=-=-=-=
-    let asideLink         = thisTarget.closest('.aside__link'),
+    /* let asideLink         = thisTarget.closest('.aside__link'),
         asideLinkParent   = (asideLink) ? asideLink.closest('.aside__nav--item') : false,
         asideItemSubList  = (asideLinkParent) ? asideLinkParent.querySelector('.aside__nav--sub-list') : false;
     
@@ -479,7 +544,7 @@ body.addEventListener('click', function (e) {
 
 
       }
-    }
+    } */
     // =-=-=-=-=-=-=-=-=-=-=-=- </aside drop list> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
@@ -487,7 +552,13 @@ body.addEventListener('click', function (e) {
 
 
 
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <language> -=-=-=-=-=-=-=-=-=-=-=-=
+
     let dropDownCurrent = thisTarget.closest('._drop-down-current'),
     dropDownParent = (dropDownCurrent) ? dropDownCurrent.closest('._drop-down') : false;
     if (dropDownCurrent) {
@@ -503,13 +574,21 @@ body.addEventListener('click', function (e) {
       })
 
     }
+
     // =-=-=-=-=-=-=-=-=-=-=-=- </language> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
 
 
-    // =-=-=-=-=-=-=-=-=-=-=-=- <clear btn input> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <clear btn for input> -=-=-=-=-=-=-=-=-=-=-=-=
+
     let inputClearBtn = thisTarget.closest('._clear-input-btn');
     if(inputClearBtn) {
       let input = inputClearBtn.closest('label').querySelector('input'),
@@ -526,13 +605,21 @@ body.addEventListener('click', function (e) {
       }
 
     }
-    // =-=-=-=-=-=-=-=-=-=-=-=- </clear btn input> -=-=-=-=-=-=-=-=-=-=-=-=
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- </clear btn for input> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
 
 
 
 
 
     // =-=-=-=-=-=-=-=-=-=-=-=- <New order> -=-=-=-=-=-=-=-=-=-=-=-=
+
     let tabLink = thisTarget.closest('._tab-link');
     if(tabLink) {
       e.preventDefault();
@@ -540,13 +627,20 @@ body.addEventListener('click', function (e) {
         tab(thisTarget);
       }
     }
+
     // =-=-=-=-=-=-=-=-=-=-=-=- </New order> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
 
 
-    // =-=-=-=-=-=-=-=-=-=-=-=- <Action btn> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+    // =-=-=-=-=-=  -=-=-=-=-=-=- <Action btn> -=-=-=-=-=-=-=-=-=-=-=-=
     /* let actionBtn = thisTarget.closest('.action-block__btn');
     if(actionBtn) {
       let subList = actionBtn.closest('.action-block').querySelector('.action-block__sub-list');
@@ -573,32 +667,95 @@ body.addEventListener('click', function (e) {
 
 
 
+
+
+
+
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- <Aside sub list> -=-=-=-=-=-=-=-=-=-=-=-=
+
+    let asideSubOpen = thisTarget.closest('._aside-sub-open');
+    if(asideSubOpen) {
+      e.preventDefault();
+
+
+      let asideSubList = asideSubOpen.closest('._aside-sub-parent').querySelector('._aside-sub-list');
+
+      checkSlideItem = true;
+
+
+
+      if(!asideSubOpen.classList.contains('_active')) {
+
+        asideSubList.classList.add('_active');
+        asideSubOpen.classList.add('_active');
+
+        slideDown(asideSubList);
+        
+      } else {
+
+        asideSubList.classList.remove('_active');
+        asideSubOpen.classList.remove('_active');
+          
+        slideUp(asideSubList);
+        
+      }
+
+
+
+    }
+
+    // =-=-=-=-=-=-=-=-=-=-=-=- </Aside sub list> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <Sub List> -=-=-=-=-=-=-=-=-=-=-=-=
 
     let subOpen = thisTarget.closest('._sub-open');
     if(subOpen) {
       e.preventDefault();
+
+      let subActiveList = document.querySelector('._sub-list._active'),
+          subActiveOpen = document.querySelector('._sub-open._active');
+      if(subActiveList) subActiveList.classList.remove('_active');
+      if(subActiveOpen) subActiveOpen.classList.remove('_active');
+
+
       let subList = subOpen.closest('._sub-parent').querySelector('._sub-list');
 
-      if(!subList.classList.contains('_active')) {
-        subList.classList.add('_active');
-        subOpen.classList.add('_active');
-      } else {
-        subList.classList.remove('_active');
-        subOpen.classList.remove('_active');
-      }
+      subList.classList.add('_active');
+      subOpen.classList.add('_active');
+
+
 
     } else {
-      let subList = document.querySelector('._sub-list._active'),
-          subOpen = document.querySelector('._sub-open._active');
-      if(subList) subList.classList.remove('_active');
-      if(subOpen) subOpen.classList.remove('_active');
+
+      let subActiveList = document.querySelector('._sub-list._active'),
+          subActiveOpen = document.querySelector('._sub-open._active');
+      if(subActiveList) subActiveList.classList.remove('_active');
+      if(subActiveOpen) subActiveOpen.classList.remove('_active');
 
     }
 
+
+
+
+
+
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- </Sub List> -=-=-=-=-=-=-=-=-=-=-=-=
-
-
 
     let checkAllLabel = thisTarget.closest('._table-check-all-checkbox');
     if(checkAllLabel) {
@@ -625,6 +782,14 @@ body.addEventListener('click', function (e) {
 
 
 
+
+
+
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <Add funds> -=-=-=-=-=-=-=-=-=-=-=-=
     let tabSelect     = thisTarget.closest('._tab-select');
     if(tabSelect) {
@@ -635,6 +800,12 @@ body.addEventListener('click', function (e) {
       }
     }
     // =-=-=-=-=-=-=-=-=-=-=-=- </Add funds> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
 
 
 
@@ -651,6 +822,12 @@ body.addEventListener('click', function (e) {
         });
     }
     // =-=-=-=-=-=-=-=-=-=-=-=- </popup> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
 
 
 
@@ -683,6 +860,13 @@ body.addEventListener('click', function (e) {
 
 
 
+
+
+
+
+
+
+
     // =-=-=-=-=-=-=-=-=-=-=-=- <icon active on focus select> -=-=-=-=-=-=-=-=-=-=-=-=
     let formLable = thisTarget.closest('._form-label'),
         formSelect = (formLable) ? formLable.querySelector('._form-select') : false;
@@ -706,6 +890,13 @@ body.addEventListener('click', function (e) {
       
     }
     // =-=-=-=-=-=-=-=-=-=-=-=- </icon active on focus select> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+
 
 
 

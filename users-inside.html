@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<script>
+    if(localStorage.getItem('theme') == 'dark') {
+        document.querySelector('body').classList.add('_dark-theme');
+    }
+</script>
+    <div class="wrapper d-flex">
+        <aside class="aside">
+            <div class="aside__body  pt-lg-5 pb-lg-5  ps-lg-0 pe-lg-0 ps-3 pe-3">
+                <a href="index.html" class="aside__logo mb-lg-5 pt-2 pb-2">
+                    <img src="img/logo.png" width="200" height="40" alt="" class="aside__logo--img">
+                </a>
+                <button class="aside__logo--burder _burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="aside__nav pb-lg-0 pb-5">
+                    <ul class="aside__nav--list">
+                        <li class="aside__nav--item">
+                            <a href="index.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-statistics"></span>
+                                Statistics
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="new-order.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-new-order"></span>
+                                New order
+                            </a>
+                        </li>
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open ">
+                                <span class="aside__link--icon _icon-orders"></span>
+                                Order
+                            </button>
+                            <ul class="aside__nav--sub-list _aside-sub-list">
+                                <li class="aside__nav--sub-item">
+                                    <a href="order.html" class="aside__nav--sub-link ">
+                                        Order logs
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Drip-feed
+                                    </a>
+                                </li>
+                                <li class="aside__nav--sub-item">
+                                    <a href="#" class="aside__nav--sub-link">
+                                        Subscriptions
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="category.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-category"></span>
+                                Category
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="services.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-services"></span>
+                                Services
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="api.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-share"></span>
+                                API
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="support.html" class="aside__nav--link aside__link  ">
+                                <span class="aside__link--icon _icon-message"></span>
+                                    Tickets
+                                <span class="aside__link--count">13513</span>
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="transaction-log.html" class="aside__nav--link aside__link ">
+                                <span class="aside__link--icon _icon-transaction"></span>
+                                Transaction log
+                            </a>
+                        </li>
+                        <li class="aside__nav--item">
+                            <a href="users-inside.html" class="aside__nav--link aside__link _current-page">
+                                <span class="aside__link--icon _icon-user"></span>
+                                User manager
+                            </a>
+                        </li>
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open ">
+                                <span class="aside__link--icon _icon-settings"></span>
+                                System Settings
+                            </button>
+                            <ul class="aside__nav--sub-list _aside-sub-list">
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-general-settings"></span>
+                                        General Setting
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <form class="aside__status d-flex align-items-center">
+                                                <input type="checkbox" id="aside-status-checkbox" class="aside__status--switch-input _hidden-checkbox _form-switch-checkbox _min">
+                                                <label for="aside-status-checkbox" class="aside__status--label _form-label-switch-checkbox aside__nav--sub-link _min d-flex align-items-center">
+                                                    <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray fw-semibold">
+                                                        Support status
+                                                    </span>
+                                                </label>
+                                            </form>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="website-settings.html" class="aside__nav--sub-link _min ">
+                                                WebSite Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                WebSite Logo
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Cookie Policy
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Terms & Policy page
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Default Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Currency Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Other
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-mail"></span>
+                                        E-mail
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Email Settings
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Email Template
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-settings"></span>
+                                        Integrations
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Payment
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="aside__nav--settings aside__settings"></div>
+                    <div class="aside__nav--user aside__user ps-3 pe-3 pt-5 mt-5 pb-5">
+                        <div class="aside__user--body row">
+                            <div class="aside__user--avatar col-3">
+                                <img src="img/user/avatar.png" width="32" height="32" alt="" class="aside__user--img">
+                            </div>
+                            <div class="aside__user--info col-9 d-flex flex-column">
+                                <span class="aside__user--name">
+                                    Hi, Mark
+                                </span>
+                                <a href="#" class="aside__user--link _link">
+                                    Admin account
+                                </a>
+                                <a href="#" class="aside__user--log-out _link mt-2">
+                                    Log out
+                                </a>
+                            </div>    
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <section class="users-inside section ps-3 pt-lg-3 pt-5 mt-4 mt-lg-0 pb-5 pe-1 pe-lg-3">
+            <div class="users-inside__header section-header _section-elem">
+                <ul class="section-header__list pb-lg-0 pt-lg-0 pb-3 pt-3">
+                    <li class="section-header__list--item">
+                        <a href="new-order.html" class="section-header__list--link _accent">
+                            <span class="section-header__list--icon _icon-section-new-order"></span>
+                            New order
+                        </a>
+                    </li>
+                    <li class="section-header__list--item">
+                        <a href="#" class="section-header__list--link">
+                            <span class="section-header__list--icon _icon-orders"></span>
+                            All orders
+                        </a>
+                    </li>
+                </ul>
+                <div class="section-header__settings">
+                    <div class="section-header__lang _drop-down">
+                        <div class="section-header__lang--current section-header__lang--item">
+                            <button class="section-header__lang--link _drop-down-current">
+                                <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                English
+                            </button>
+                        </div>
+                        <ul class="section-header__lang--list _drop-down-list">
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                            <li class="section-header__lang--item">
+                                <a href="#" class="section-header__lang--link">
+                                    <img src="img/lang/eng.png" width="32" height="24" alt="" class="section-header__lang--flag">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                      </div>
+                      <div class="section-header__settings--block d-flex">
+                        <div class="section-header__theme ps-3 pe-3 ps-md-1 pe-md-1 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__theme--link _theme-link _light-theme section-header__min-link" title="Change theme">
+                                <span class="section-header__theme--icon section-header__min-icon _icon-theme-to-dark"></span>
+                                <script>
+                                    if(localStorage.getItem('theme') == 'dark') {
+                                        let themeLink = document.querySelector('._theme-link');
+                                        themeLink.classList.remove('_light-theme');
+                                        themeLink.classList.add('_dark-theme');
+    
+                                        let themeIcon = themeLink.querySelector('._icon-theme-to-dark');
+                                        themeIcon.classList.remove('_icon-theme-to-dark');
+                                        themeIcon.classList.add('_icon-theme-to-light');
+                                    }
+                                </script>
+                            </a>
+                        </div>
+                        <div class="section-header__message ps-3 pe-3 ps-md-2 pe-md-2 _append-item" data-append-to=".aside__settings">
+                            <a href="#" class="section-header__message--link section-header__min-link _has-effect" title="Messages">
+                                <span class="section-header__message--icon section-header__min-icon _icon-message"></span>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="section-header__user ms-1 ms-md-4">
+                        <div class="section-header__user--info">
+                            <span class="section-header__user--name">
+                                Hi, Mark
+                            </span>
+                            <a href="profile.html" class="section-header__user--link _link">
+                                Admin account
+                            </a>
+                        </div>
+                        <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
+                            <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+<div class="users-inside__row row">
+    <div class="users-inside__block mt-3 col-12 col-xl-6">
+        <div class="users-inside__block--body _section-block">
+            <div class="users-inside__block--header _section-block-header ps-2 ps-sm-4 pe-2 pb-1 pt-1">
+                <div class="users-inside__block--row _section-panel-active">
+                    <h2 class="users-inside__block--title _title ps-2">
+                        Basic information
+                    </h2>
+                    <div class="users-inside__block--panel _section-panel">
+    <div class="_section-panel-body pe-4 me-1">
+        <a href="#" class="_section-panel-link _hide-block-btn me-5 _link">
+            <span class="_section-panel-icon _icon-arrow _rotate90"></span>
+        </a>
+        <a href="#" class="_section-panel-link _remove-block-btn ms-3 _link">
+            <span class="_section-panel-icon _icon-close"></span>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+            <form action="#" class="users-inside__block--form users-inside__form">
+                <div class="users-inside__form--body p-3 ps-2 pe-2 ps-sm-4 pe-sm-4">
+                    <div class="users-inside__form--row row ps-2 pe-2">
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                First name
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="first-name" placeholder="Last name" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Last name
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="first-name" placeholder="First name" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                    </div>
+                    <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label">
+                        <span class="users-inside__form--placeholder _form-placeholder">
+                            E-mail
+                        </span>
+                        <span class="users-inside__form--label-body _form-elem-wrapper">
+                            <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                            <input type="text" name="email" placeholder="E-mail" class="users-inside__form--input _form-input">
+                        </span>
+                    </label>
+                    <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label">
+                        <span class="users-inside__form--placeholder _form-placeholder">
+                            Account type
+                        </span>
+                        <span class="users-inside__form--label-body _form-elem-wrapper">
+                            <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                            <input type="text" name="account-type" placeholder="Placeholder" class="users-inside__form--input _form-input">
+                        </span>
+                    </label>
+                    <div class="users-inside__form--row row ps-2 pe-2">
+                        <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Status
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-arrow"></span>
+                                <select name="status" class="users-inside__form--select _form-select">
+                                    <option value="active" selected>Active</option>
+                                    <option value="active-1" >Active-1</option>
+                                    <option value="active-2" >Active-2</option>
+                                    <option value="active-3" >Active-3</option>
+                                </select>
+                            </span>
+                        </label>
+                        <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Time Zone
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-arrow"></span>
+                                <select name="time-zone" class="users-inside__form--select _form-select">
+                                    <option value="time-zone" selected>(UTC +01:00) Europe/P..</option>
+                                    <option value="time-zone-1" >(UTC +01:00) Europe/P..-1</option>
+                                    <option value="time-zone-2" >(UTC +01:00) Europe/P..-2</option>
+                                    <option value="time-zone-3" >(UTC +01:00) Europe/P..-3</option>
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="users-inside__form--row row ps-2 pe-2">
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Password
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="password" name="password" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Confirm Password
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="password" name="confirm-password" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <div class="users-inside__form--note col-12 col-sm-6 pt-2 _pink _fs-12">
+                            Note: If you don't want to change password then leave these password fields empty!
+                        </div>
+                    </div>
+                    <label class="users-inside__form--label ps-2 pe-2 pt-3 _form-label">
+                        <span class="users-inside__form--placeholder _form-placeholder">
+                            Description
+                        </span>
+                        <span class="users-inside__form--label-body _form-elem-wrapper _textarea-wrapper">
+                            <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                            <textarea name="description" rows="4" placeholder="Share a reply" class="users-inside__form--textarea _form-textarea"></textarea>
+                        </span>
+                    </label>
+                    <div class="users-inside__form--row row ps-2 pe-2 pt-3">
+                        <span class="users-inside__form--title fw-bold _fs-14">
+                            Allowed payment methods:
+                        </span>
+                        <div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-1" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-1" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div><div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-2" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-2" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div><div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-3" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-3" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div><div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-4" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-4" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div><div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-5" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-5" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div><div class="users-inside__form--switch col-6 col-sm-4 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-6" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-6" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div>
+                    </div>
+                </div>
+                <div class="users-inside__form--footer _section-block-footer ps-4 pe-4 pt-4 pb-3 d-flex justify-content-end">
+                    <button class="users-inside__form--submit _btn _large-btn me-2">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="users-inside__block mt-3 col-12 col-xl-6">
+        <div class="users-inside__block--body _section-block">
+            <div class="users-inside__block--header _section-block-header ps-4 pe-2 pb-1 pt-1">
+                <div class="users-inside__block--row _section-panel-active">
+                    <h2 class="users-inside__block--title _title ps-2">
+                        More information
+                    </h2>
+                    <div class="users-inside__block--panel _section-panel">
+    <div class="_section-panel-body pe-4 me-1">
+        <a href="#" class="_section-panel-link _hide-block-btn me-5 _link">
+            <span class="_section-panel-icon _icon-arrow _rotate90"></span>
+        </a>
+        <a href="#" class="_section-panel-link _remove-block-btn ms-3 _link">
+            <span class="_section-panel-icon _icon-close"></span>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+            <form action="#" class="users-inside__block--form users-inside__form">
+                <div class="users-inside__form--body p-3 ps-4 pe-4">
+                    <div class="users-inside__form--row row ps-2 pe-2">
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Website
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="website" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Phone
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="tel" name="phone" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                    </div>
+                    <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label">
+                        <span class="users-inside__form--placeholder _form-placeholder">
+                            E-mail
+                        </span>
+                        <span class="users-inside__form--label-body _form-elem-wrapper">
+                            <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                            <input type="text" name="skype-id" placeholder="" class="users-inside__form--input _form-input">
+                        </span>
+                    </label>
+                    <div class="users-inside__form--row row ps-2 pe-2">
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                Address
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="address" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <label class="users-inside__form--label pt-3 _form-label col-12 col-sm-6">
+                            <span class="users-inside__form--placeholder _form-placeholder">
+                                WhatsApp Number
+                            </span>
+                            <span class="users-inside__form--label-body _form-elem-wrapper">
+                                <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                                <input type="text" name="whatsapp-number" placeholder="" class="users-inside__form--input _form-input">
+                            </span>
+                        </label>
+                        <div class="users-inside__form--note col-12 col-sm-6 pt-2 _pink _fs-12">
+                            Note: If you don't want to change password then leave these password fields empty!
+                        </div>
+                        <div class="users-inside__form--min-item col-12 col-sm-6 pt-2 _fs-12">
+                            <span class="users-inside__form--subtitle _fs-12">
+                                Ignore minimum amount sum
+                            </span>
+                            <div class="users-inside__form--row row">
+                                <div class="users-inside__form--switch col-6 d-flex pt-2 pb-2">
+    <input type="checkbox" id="users-inside-checkbox-7" class="users-inside__form--switch-input _hidden-checkbox _form-switch-checkbox">
+    <label for="users-inside-checkbox-7" class="users-inside__form--label _form-label-switch-checkbox d-flex align-items-center">
+        <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray">
+            PayPal
+        </span>
+    </label>
+</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="users-inside__form--footer _section-block-footer ps-4 pe-4 pt-4 pb-3 d-flex justify-content-end">
+                    <button class="users-inside__form--submit _btn _large-btn me-2">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="users-inside__block mt-3 col-12 col-xl-6">
+        <div class="users-inside__block--body _section-block">
+            <div class="users-inside__block--header _section-block-header ps-4 pe-2 pb-1 pt-1">
+                <div class="users-inside__block--row _section-panel-active">
+                    <h2 class="users-inside__block--title _title ps-2">
+                        Add funds
+                    </h2>
+                    <div class="users-inside__block--panel _section-panel">
+    <div class="_section-panel-body pe-4 me-1">
+        <a href="#" class="_section-panel-link _hide-block-btn me-5 _link">
+            <span class="_section-panel-icon _icon-arrow _rotate90"></span>
+        </a>
+        <a href="#" class="_section-panel-link _remove-block-btn ms-3 _link">
+            <span class="_section-panel-icon _icon-close"></span>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+            <form action="#" class="users-inside__block--form users-inside__form">
+                <div class="users-inside__form--body p-3 ps-4 pe-4">
+                    <label class="users-inside__form--label pt-3 ps-2 pe-2 _form-label">
+                        <span class="users-inside__form--placeholder _form-placeholder">
+                            Funds
+                        </span>
+                        <span class="users-inside__form--label-body _form-elem-wrapper">
+                            <span class="users-inside__form--icon _form-icon _icon-close _clear-input-btn"></span>
+                            <input type="text" name="add-funds" value="0.0000" placeholder="" class="users-inside__form--input _form-input">
+                        </span>
+                    </label>
+                </div>
+                <div class="users-inside__form--footer _section-block-footer ps-4 pe-4 pt-4 pb-3 d-flex justify-content-end">
+                    <button class="users-inside__form--submit _btn _large-btn me-2">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</section>
+</div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

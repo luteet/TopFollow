@@ -37,12 +37,12 @@
                                 New order
                             </a>
                         </li>
-                        <li class="aside__nav--item">
-                            <button class="aside__nav--link aside__link ">
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open ">
                                 <span class="aside__link--icon _icon-orders"></span>
                                 Order
                             </button>
-                            <ul class="aside__nav--sub-list">
+                            <ul class="aside__nav--sub-list _aside-sub-list">
                                 <li class="aside__nav--sub-item">
                                     <a href="order.html" class="aside__nav--sub-link ">
                                         Order logs
@@ -62,12 +62,6 @@
                         </li>
                         <li class="aside__nav--item">
                             <a href="services.html" class="aside__nav--link aside__link ">
-                                <span class="aside__link--icon _icon-category"></span>
-                                Category
-                            </a>
-                        </li>
-                        <li class="aside__nav--item">
-                            <a href="services.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-services"></span>
                                 Services
                             </a>
@@ -78,13 +72,13 @@
                                 API
                             </a>
                         </li>
-                        <li class="aside__nav--item">
-                            <a href="support.html" class="aside__nav--link aside__link  ">
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open  ">
                                 <span class="aside__link--icon _icon-message"></span>
-                                    Tickets
+                                    Support
                                 <span class="aside__link--count">13513</span>
-                            </a>
-                            <!-- <ul class="aside__nav--sub-list">
+                            </button>
+                            <ul class="aside__nav--sub-list _aside-sub-list">
                                 <li class="aside__nav--sub-item">
                                     <a href="support.html" class="aside__nav--sub-link ">
                                         Tickets
@@ -96,30 +90,18 @@
                                         FAQs
                                     </a>
                                 </li>
-                            </ul> -->
+                            </ul>
                         </li>
-                        <!-- <li class="aside__nav--item">
+                        <li class="aside__nav--item">
                             <a href="add-funds.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-add-funds"></span>
                                 Add funds
                             </a>
-                        </li> -->
+                        </li>
                         <li class="aside__nav--item">
                             <a href="transaction-log.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-transaction"></span>
                                 Transaction log
-                            </a>
-                        </li>
-                        <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
-                                <span class="aside__link--icon _icon-user"></span>
-                                User manager
-                            </a>
-                        </li>
-                        <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
-                                <span class="aside__link--icon _icon-settings"></span>
-                                System Settings
                             </a>
                         </li>
                     </ul>
@@ -133,9 +115,9 @@
                                 <span class="aside__user--name">
                                     Hi, Mark
                                 </span>
-                                <a href="#" class="aside__user--link _link">
-                                    Admin account
-                                </a>
+                                <span class="aside__user--balance">
+                                    Balance: 1000$
+                                </span>
                                 <a href="#" class="aside__user--log-out _link mt-2">
                                     Log out
                                 </a>
@@ -209,12 +191,12 @@
                       </div>
                     <div class="section-header__user ms-1 ms-md-4">
                         <div class="section-header__user--info">
-                            <span class="section-header__user--name">
+                            <a href="profile.html" class="section-header__user--name _link">
                                 Hi, Mark
-                            </span>
-                            <a href="profile.html" class="section-header__user--link _link">
-                                Admin account
                             </a>
+                            <span class="section-header__user--balance">
+                                Balance: 1000$
+                            </span>
                         </div>
                         <a href="#" class="section-header__user--avatar ms-1 ms-md-4">
                             <img src="img/user/avatar.png" width="32" height="32" alt="" class="section-header__user--img">
@@ -230,7 +212,7 @@
     <div class="api__article--body _section-block">
         <div class="api__article--header _section-block-header ps-2 ps-sm-4 pb-1 pt-1">
             <div class="api__article--row _section-panel-active">
-                <h2 class="api__article--title _title">
+                <h2 class="api__article--title _title ps-2">
                     API Documentation
                 </h2>
                 <div class="api__article--panel _section-panel">
@@ -246,10 +228,10 @@
             </div>
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
-            <span class="api-block__title pb-2">
+            <span class="api-block__title pb-2 ps-2 pe-2">
                 Note: Please read the API intructions carefully. Its your solo responsability what you add by our API.
             </span>
-            <div class="api-block__table">
+            <div class="api-block__table ps-2 pe-2">
                 <div class="api-block__table--block _header-active">
     <div class="api-block__table--item">
         HTTP Method 
@@ -282,7 +264,7 @@
             </div>
         </div>
         <div class="api-block__footer p-2 p-sm-4 pb-3">
-            <a href="#" download class="api-block__link _btn _large-btn ps-5 pe-5">
+            <a href="#" download class="api-block__link _btn _large-btn ms-2 ps-5 pe-5">
                 Download PHP Code Examples
             </a>
         </div>
@@ -292,7 +274,7 @@
     <div class="api__article--body _section-block">
         <div class="api__article--header _section-block-header ps-2 ps-sm-4 pb-1 pt-1">
             <div class="api__article--row _section-panel-active">
-                <h2 class="api__article--title _title">
+                <h2 class="api__article--title _title ps-2 pe-2">
                     Place new Order
                 </h2>
                 <div class="api__article--panel _section-panel">
@@ -308,7 +290,7 @@
             </div>
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
-            <form action="#" class="api-block__form pb-2">
+            <form action="#" class="api-block__form pb-2 ps-2 pe-2">
                 <label class="api-block__label _form-label">
                     <span class="api-block__label--body _form-elem-wrapper">
                         <span class="api-block__label--icon _form-icon _icon-arrow"></span>
@@ -322,7 +304,7 @@
 
                 </label>
             </form>
-            <div class="api-block__table">
+            <div class="api-block__table ps-2 pe-2">
                 <div class="api-block__table--block _header-block">
     <div class="api-block__table--item">
         Parameter
@@ -382,10 +364,10 @@
 </div>
             </div>
         </div>
-        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             Example response:
         </span>
-        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             <pre class="api-block__code--body p-3">
 {
     "status": "success",
@@ -397,13 +379,13 @@
 </div>
 <div class="api__article mt-3">
     <div class="api__article--body _section-block">
-        <div class="api__article--header _section-block-header">
-            <h2 class="api__article--title _title ps-2 ps-sm-4 pt-2 pb-2">
+        <div class="api__article--header _section-block-header ps-2 ps-sm-4 pb-1 pt-1">
+            <h2 class="api__article--title _title ps-2 pe-2">
                 Multiple orders status
             </h2>
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
-            <div class="api-block__table">
+            <div class="api-block__table ps-2 pe-2">
                 <div class="api-block__table--block _header-block">
     <div class="api-block__table--item">
         Parameter
@@ -435,10 +417,10 @@
 </div>
             </div>
         </div>
-        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             Example response:
         </span>
-        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             <pre class="api-block__code--body p-3">
 {
     "12": {
@@ -463,13 +445,13 @@
 </div>
 <div class="api__article mt-3">
     <div class="api__article--body _section-block">
-        <div class="api__article--header _section-block-header">
-            <h2 class="api__article--title _title ps-2 ps-sm-4 pt-2 pb-2">
+        <div class="api__article--header _section-block-header ps-2 ps-sm-4 pb-1 pt-1">
+            <h2 class="api__article--title _title ps-2 pe-2">
                 Services Lists
             </h2>
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
-            <div class="api-block__table">
+            <div class="api-block__table ps-2 pe-2">
                 <div class="api-block__table--block _header-block">
     <div class="api-block__table--item">
         Parameter
@@ -494,10 +476,10 @@
 </div>
             </div>
         </div>
-        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             Example response:
         </span>
-        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             <pre class="api-block__code--body p-3">
 [
     {
@@ -540,13 +522,13 @@
 </div>
 <div class="api__article mt-3">
     <div class="api__article--body _section-block">
-        <div class="api__article--header _section-block-header">
-            <h2 class="api__article--title _title ps-2 ps-sm-4 pt-2 pb-2">
+        <div class="api__article--header _section-block-header ps-2 ps-sm-4 pb-1 pt-1">
+            <h2 class="api__article--title _title ps-2 pe-2">
                 Balance
             </h2>
         </div>
         <div class="api__article--block api-block p-2 p-sm-4 pb-1">
-            <div class="api-block__table">
+            <div class="api-block__table ps-2 pe-2">
                 <div class="api-block__table--block _header-block">
     <div class="api-block__table--item">
         Parameter
@@ -571,10 +553,10 @@
 </div>
             </div>
         </div>
-        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <span class="api-block__title pt-2 pb-3 ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             Example response:
         </span>
-        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4">
+        <div class="api-block__code ps-2 pe-2 ps-sm-4 pe-sm-4 ms-2 me-2">
             <pre class="api-block__code--body p-3">
 {
     "status": "success",

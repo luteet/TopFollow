@@ -37,12 +37,12 @@
                                 New order
                             </a>
                         </li>
-                        <li class="aside__nav--item">
-                            <button class="aside__nav--link aside__link ">
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open ">
                                 <span class="aside__link--icon _icon-orders"></span>
                                 Order
                             </button>
-                            <ul class="aside__nav--sub-list">
+                            <ul class="aside__nav--sub-list _aside-sub-list">
                                 <li class="aside__nav--sub-item">
                                     <a href="order.html" class="aside__nav--sub-link ">
                                         Order logs
@@ -61,7 +61,7 @@
                             </ul>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="services.html" class="aside__nav--link aside__link ">
+                            <a href="category.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-category"></span>
                                 Category
                             </a>
@@ -84,26 +84,7 @@
                                     Tickets
                                 <span class="aside__link--count">13513</span>
                             </a>
-                            <!-- <ul class="aside__nav--sub-list">
-                                <li class="aside__nav--sub-item">
-                                    <a href="support.html" class="aside__nav--sub-link ">
-                                        Tickets
-                                        <span class="aside__link--count">13513</span>
-                                    </a>
-                                </li>
-                                <li class="aside__nav--sub-item">
-                                    <a href="faq.html" class="aside__nav--sub-link ">
-                                        FAQs
-                                    </a>
-                                </li>
-                            </ul> -->
                         </li>
-                        <!-- <li class="aside__nav--item">
-                            <a href="add-funds.html" class="aside__nav--link aside__link ">
-                                <span class="aside__link--icon _icon-add-funds"></span>
-                                Add funds
-                            </a>
-                        </li> -->
                         <li class="aside__nav--item">
                             <a href="transaction-log.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-transaction"></span>
@@ -111,16 +92,102 @@
                             </a>
                         </li>
                         <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                            <a href="users-inside.html" class="aside__nav--link aside__link ">
                                 <span class="aside__link--icon _icon-user"></span>
                                 User manager
                             </a>
                         </li>
-                        <li class="aside__nav--item">
-                            <a href="#" class="aside__nav--link aside__link ">
+                        <li class="aside__nav--item _aside-sub-parent">
+                            <button class="aside__nav--link aside__link _aside-sub-open ">
                                 <span class="aside__link--icon _icon-settings"></span>
                                 System Settings
-                            </a>
+                            </button>
+                            <ul class="aside__nav--sub-list _aside-sub-list">
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-general-settings"></span>
+                                        General Setting
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <form class="aside__status d-flex align-items-center">
+                                                <input type="checkbox" id="aside-status-checkbox" class="aside__status--switch-input _hidden-checkbox _form-switch-checkbox _min">
+                                                <label for="aside-status-checkbox" class="aside__status--label _form-label-switch-checkbox aside__nav--sub-link _min d-flex align-items-center">
+                                                    <span class="ms-4 ps-3 _form-placeholder-switch-checkbox _fs-12 _dark-gray fw-semibold">
+                                                        Support status
+                                                    </span>
+                                                </label>
+                                            </form>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="website-settings.html" class="aside__nav--sub-link _min ">
+                                                WebSite Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                WebSite Logo
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Cookie Policy
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Terms & Policy page
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Default Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Currency Setting
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Other
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-mail"></span>
+                                        E-mail
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Email Settings
+                                            </a>
+                                        </li>
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Email Template
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav--sub-item _aside-sub-parent">
+                                    <button class="aside__nav--sub-link aside__link _aside-sub-open">
+                                        <span class="aside__sub--icon _icon-settings"></span>
+                                        Integrations
+                                    </button>
+                                    <ul class="aside__nav--sub-list _aside-sub-list _min">
+                                        <li class="aside__nav--sub-item">
+                                            <a href="#" class="aside__nav--sub-link _min">
+                                                Payment
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <div class="aside__nav--settings aside__settings"></div>
@@ -699,63 +766,63 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <td class="pe-3 ps-3 pt-2">
+                                <td class="pe-3 ps-4 pt-4 pb-2">
                                     ID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Name
                                 </td>
-                                <td class="pe-3 pt-3">
+                                <td class="pe-3 pt-4 pb-2">
                                     Total Orders
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Type
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Api Provider
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Api ServiceID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Rate Per 1000($)
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Min/Max Order
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Status
                                 </td>
-                                <td class="text-center pe-3 pt-2">
+                                <td class="text-center pe-3 pt-4 pb-2">
                                     Details
                                 </td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -765,29 +832,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -797,29 +864,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -858,63 +925,63 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <td class="pe-3 ps-3 pt-2">
+                                <td class="pe-3 ps-4 pt-4 pb-2">
                                     ID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Name
                                 </td>
-                                <td class="pe-3 pt-3">
+                                <td class="pe-3 pt-4 pb-2">
                                     Total Orders
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Type
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Api Provider
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Api ServiceID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Rate Per 1000($)
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Min/Max Order
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Status
                                 </td>
-                                <td class="text-center pe-3 pt-2">
+                                <td class="text-center pe-3 pt-4 pb-2">
                                     Details
                                 </td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -924,29 +991,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -956,29 +1023,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -988,29 +1055,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1020,29 +1087,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1081,63 +1148,63 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <td class="pe-3 ps-3 pt-2">
+                                <td class="pe-3 ps-4 pt-4 pb-2">
                                     ID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Name
                                 </td>
-                                <td class="pe-3 pt-3">
+                                <td class="pe-3 pt-4 pb-2">
                                     Total Orders
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Type
                                 </td>
-                                <td class="pe-3 pt-2 text-center">
+                                <td class="pe-3 pt-4 pb-2 text-center">
                                     Api Provider
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Api ServiceID
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Rate Per 1000($)
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Min/Max Order
                                 </td>
-                                <td class="pe-3 pt-2">
+                                <td class="pe-3 pt-4 pb-2">
                                     Status
                                 </td>
-                                <td class="text-center pe-3 pt-2">
+                                <td class="text-center pe-3 pt-4 pb-2">
                                     Details
                                 </td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1147,29 +1214,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1179,29 +1246,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1211,29 +1278,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
@@ -1243,29 +1310,29 @@
         <a href="#" class="statistics__tab-table--link _icon-details _link"></a>
     </td>
 </tr><tr class="statistics__tab-table--item">
-    <td class="ps-3 pe-3 fw-bold pt-2 pb-2">
+    <td class="ps-4 pe-3 fw-bold pt-2 pb-2">
         1
     </td>
     <td class="fw-bold pe-3 pt-2 pb-2">
         Drugak
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         API
     </td>
-    <td class="pe-3 text-center pt-2 pb-2">
+    <td class="pe-3 text-center pt-2 pb-2 _dark-gray">
         vinasmm.com
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         1201
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         0.00 - 
         <span class="statistics__tab-table--min-value">0.08</span>
     </td>
-    <td class="pe-3 pt-2 pb-2">
+    <td class="pe-3 pt-2 pb-2 _dark-gray">
         100 / 10000000
     </td>
     <td class="pe-3 pt-2 pb-2">
