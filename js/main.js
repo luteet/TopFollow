@@ -11,7 +11,7 @@ const body = document.querySelector('body'),
 
 
 
-    
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <tab> -=-=-=-=-=-=-=-=-=-=-=-=
 
 function tab(elem, duration) {
@@ -431,11 +431,42 @@ document.querySelectorAll('._tab-select').forEach(element => {
 
 
 
+function getCoords(elem) {
+  let box = elem.getBoundingClientRect();
+
+  return {
+    top: box.top + window.pageYOffset,
+    right: box.right + window.pageXOffset,
+    bottom: box.bottom + window.pageYOffset,
+    left: box.left + window.pageXOffset
+  };
+}
+
+function removeSubList() {
+  let subActiveList = document.querySelector('._sub-list._active'),
+  subActiveOpen = document.querySelector('._sub-open._active');
+
+  if(subActiveList) {
+    FX.fadeOut(subActiveList, {
+      duration: 200,
+      complete: function () {
+        subActiveList.classList.remove('_active');
+        subActiveList.style.display = 'none';
+      }
+    });
+  }
+
+  if(subActiveOpen) subActiveOpen.classList.remove('_active');
+}
 
 
 
 let thisTarget;
 let checkSlideItem = false;
+
+
+
+
 body.addEventListener('click', function (e) {
 
     thisTarget = e.target;
@@ -454,7 +485,7 @@ body.addEventListener('click', function (e) {
 
 
 
-
+   
 
 
 
@@ -723,25 +754,33 @@ body.addEventListener('click', function (e) {
     if(subOpen) {
       e.preventDefault();
 
-      let subActiveList = document.querySelector('._sub-list._active'),
-          subActiveOpen = document.querySelector('._sub-open._active');
-      if(subActiveList) subActiveList.classList.remove('_active');
-      if(subActiveOpen) subActiveOpen.classList.remove('_active');
+      if(!subOpen.classList.contains('_active')) {
 
+        removeSubList();
 
-      let subList = subOpen.closest('._sub-parent').querySelector('._sub-list');
+        let subList = subOpen.closest('._sub-parent').querySelector('._sub-list');
 
-      subList.classList.add('_active');
-      subOpen.classList.add('_active');
+        subList.style.setProperty('--x', getCoords(subOpen).left + 'px');
+        subList.style.setProperty('--y', getCoords(subOpen).top + 'px');
 
+        FX.fadeIn(subList, {
+          duration: 200,
+          complete: function () {
+            subList.classList.add('_active');
+            subOpen.classList.add('_active');
+          }
+        });
+      } else {
+        removeSubList();
+      }
+      
 
 
     } else {
 
-      let subActiveList = document.querySelector('._sub-list._active'),
-          subActiveOpen = document.querySelector('._sub-open._active');
-      if(subActiveList) subActiveList.classList.remove('_active');
-      if(subActiveOpen) subActiveOpen.classList.remove('_active');
+      removeSubList();
+
+      
 
     }
 
